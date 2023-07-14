@@ -12,6 +12,7 @@ public class enemymovement : MonoBehaviour
     {
         Patroling(patrolPoints[patrolIndex].position);
         patrolToNextPoint();
+        patrolRotation();
     }
         //function that moves the enemy to a certain point on the map
     void Patroling(Vector2 positionToGo)
@@ -32,6 +33,19 @@ public class enemymovement : MonoBehaviour
         if (patrolIndex > patrolPoints.Length - 1)
         {
             patrolIndex = 0;
+            return;
+        }
+    }
+    void patrolRotation()
+    {
+        if (patrolIndex == 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            return;
+        }
+        if (patrolIndex == 1)
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             return;
         }
     }

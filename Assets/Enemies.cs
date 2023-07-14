@@ -15,7 +15,7 @@ public class Enemies : MonoBehaviour
       //function that creates a ray, if the gameobject with tag player is in the ray the player gameobject will be destryed  
     void targetPlayer()
     {
-        RaycastHit2D targetPoint = (Physics2D.Raycast(transform.position, Vector2.left, rayLength,PlayerMask));
+        RaycastHit2D targetPoint = (Physics2D.Raycast(transform.position, -transform.right, rayLength,PlayerMask));
         if (targetPoint.collider!=null&&targetPoint.collider.tag=="Player")
         {
             
@@ -30,7 +30,7 @@ public class Enemies : MonoBehaviour
         //visual line that mimics the raycast.
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay (transform.position, Vector2.left*rayLength);
+        Gizmos.DrawRay (transform.position, -transform.right * rayLength);
     }
 }
 
