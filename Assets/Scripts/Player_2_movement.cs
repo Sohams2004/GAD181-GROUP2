@@ -12,7 +12,7 @@ public class Player_2_movement : MonoBehaviour
 
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()

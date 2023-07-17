@@ -9,18 +9,18 @@ public class Enemies : MonoBehaviour
 
     void Update()
     {
-        targetPlayer();
+        TargetPlayer();
        
     }
       //function that creates a ray, if the gameobject with tag player is in the ray the player gameobject will be destryed  
-    void targetPlayer()
+    void TargetPlayer()
     {
         RaycastHit2D targetPoint = (Physics2D.Raycast(transform.position, -transform.right, rayLength,PlayerMask));
         if (targetPoint.collider!=null&&targetPoint.collider.tag=="Player")
         {
             
             Debug.Log("player is found");
-            Destroy(GameObject.FindWithTag("Player") );
+            //Destroy(GameObject.FindWithTag("Player") );
         }
         else
         {

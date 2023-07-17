@@ -40,12 +40,12 @@ public class enemymovement : MonoBehaviour
     {
         if (patrolIndex == 0)
         {
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             return;
         }
         if (patrolIndex == 1)
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             return;
         }
     }
