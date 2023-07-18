@@ -663,7 +663,7 @@ MonoBehaviour:
   rayLength: 9.5
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
 --- !u!70 &1078514568
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 1637005731}
   - component: {fileID: 1637005730}
   - component: {fileID: 1637005734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 1866349119}
   - component: {fileID: 1866349118}
   - component: {fileID: 1866349117}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player 2
   m_TagString: Player
   m_Icon: {fileID: 0}
