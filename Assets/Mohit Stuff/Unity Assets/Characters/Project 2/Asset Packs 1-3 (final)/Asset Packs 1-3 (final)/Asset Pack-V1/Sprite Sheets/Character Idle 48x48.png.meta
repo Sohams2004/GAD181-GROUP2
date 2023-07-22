@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: e3e1973766b66ca40aa66ace2bfb406b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2088611571101158987
+    second: Character Idle 48x48_0
+  - first:
+      213: -5506749044783737717
+    second: Character Idle 48x48_1
+  - first:
+      213: 702517300331504099
+    second: Character Idle 48x48_2
+  - first:
+      213: 6616095128039270111
+    second: Character Idle 48x48_3
+  - first:
+      213: -171407533850135519
+    second: Character Idle 48x48_4
+  - first:
+      213: -332019734268451087
+    second: Character Idle 48x48_5
+  - first:
+      213: 785918676004794235
+    second: Character Idle 48x48_6
+  - first:
+      213: -2215244206637456481
+    second: Character Idle 48x48_7
+  - first:
+      213: -1686760662853372204
+    second: Character Idle 48x48_8
+  - first:
+      213: -8807941324076890122
+    second: Character Idle 48x48_9
+  - first:
+      213: 6865505521695014588
+    second: Character Idle 48x48_10
+  - first:
+      213: 85382961567003827
+    second: Character Idle 48x48_11
+  - first:
+      213: -8561187141513409151
+    second: Character Idle 48x48_12
+  - first:
+      213: 1012058385161565813
+    second: Character Idle 48x48_13
+  - first:
+      213: 5545959574215628201
+    second: Character Idle 48x48_14
+  - first:
+      213: 3514680058051705754
+    second: Character Idle 48x48_15
+  - first:
+      213: 5233516792862689718
+    second: Character Idle 48x48_16
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -32,7 +83,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,7 +92,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +132,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +153,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Character Idle 48x48_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 8
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e163d633c7dfb900800000000000000
+      internalID: 702517300331504099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 8
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd629f2277711db50800000000000000
+      internalID: 6616095128039270111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 8
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124790191c90f9df0800000000000000
+      internalID: -171407533850135519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 8
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe3d10a5ec274f50800000000000000
+      internalID: 6865505521695014588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_11
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 8
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b47216e9575f2100800000000000000
+      internalID: 85382961567003827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 8
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d837667ad803980800000000000000
+      internalID: -8561187141513409151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_13
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 8
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576b28b3dbd8b0e00800000000000000
+      internalID: 1012058385161565813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_14
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 8
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a59cc759d437fc40800000000000000
+      internalID: 5545959574215628201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_15
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 8
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b325724e6a6c030800000000000000
+      internalID: 3514680058051705754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character Idle 48x48_16
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 8
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b94f947bcf21a840800000000000000
+      internalID: 5233516792862689718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
