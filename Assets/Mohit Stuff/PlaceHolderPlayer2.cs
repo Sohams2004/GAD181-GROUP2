@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaceHolderPlayer2 : MonoBehaviour
 {
-    [SerializeField] float m_speed = 4.0f;
+    //[SerializeField] float m_speed = 4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class PlaceHolderPlayer2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputX = Input.GetAxis("Horizontal");
+       // float inputX = Input.GetAxis("Horizontal");
 
     }
 }
