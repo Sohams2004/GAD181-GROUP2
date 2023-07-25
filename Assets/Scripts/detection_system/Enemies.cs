@@ -20,7 +20,7 @@ public class Enemies : MonoBehaviour
         {
             
             Debug.Log("player is found");
-           // Destroy(GameObject.FindWithTag("Player") );
+            //Destroy(GameObject.FindWithTag("Player") );
         }
         else
         {
