@@ -10,6 +10,9 @@ public class PlaceHolderPlayer : MonoBehaviour
     int playerHP = 100;
 
     GameObject gasWall;
+    GameObject buttonOne;
+    [SerializeField] private Animator animatorButtonOne;
+    [SerializeField] private Animator animatorGasWall;
 
     /// <summary>
     /// replace movement code with soham movement else write your own
@@ -27,6 +30,7 @@ public class PlaceHolderPlayer : MonoBehaviour
     void Start()
     {
         gasWall = GameObject.Find("GasWall");
+        buttonOne = GameObject.Find("button 1 opens gate save player");
 
         m_body2d = GetComponent<Rigidbody2D>();
     }
@@ -71,6 +75,17 @@ public class PlaceHolderPlayer : MonoBehaviour
                 Debug.Log("health" + playerHP);
             }
         }
+        if(buttonOne.GetComponent<TriggerButton>().inButtonOne == true)
+        {
+            Debug.Log("beep");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("boop");
+                animatorButtonOne.SetBool("OpenDoor", true);
+                animatorGasWall.SetBool("StopGas", true);
+            }
+        }
+
         // A confused should i have put all the OnTriggerEnter, Exits and stays here with 
         /// if other = gas or other equal button or is it the way i did better to have collidors seperate small scripts
         // cause if here thne how will i differentiate from each buttons collidor having 5 tags?
