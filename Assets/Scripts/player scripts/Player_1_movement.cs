@@ -6,11 +6,17 @@ public class Player_1_movement : MonoBehaviour
 {
     public float movementSpeed = 10f;
     public float jumpforce = 5;
+
+    public Vector2 player1_Stand;
+    public Vector2 player1_Crouch;
+
+    public BoxCollider2D P1_boxCollider2D;
     
     public Rigidbody2D rb;
 
     void Start()
     {
+        P1_boxCollider2D = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -24,6 +30,19 @@ public class Player_1_movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
             rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+        }   
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            P1_boxCollider2D.size = player1_Crouch;
+        }
+
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            P1_boxCollider2D.size = player1_Stand;
         }
     }
 }
