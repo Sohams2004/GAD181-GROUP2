@@ -39,7 +39,7 @@ public class PlaceHolderPlayer : MonoBehaviour
     void Update()
     {
         // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
+        float inputX = Input.GetAxis("Horizontal1");
         m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
         // Swap direction of sprite depending on walk direction
         if (inputX > 0)
@@ -54,7 +54,7 @@ public class PlaceHolderPlayer : MonoBehaviour
             m_facingDirection = -1;
         }
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("up")/* || Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.RightControl)*/)
         {
             m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
         }
