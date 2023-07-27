@@ -16,8 +16,14 @@ public class Keypad_functionality : MonoBehaviour
     {
         if (displayText.text == passcode)
         {
+            displayText.text = "Beeepbeppp booooop";
             Destroy(GameObject.FindWithTag("gate1"));
             keyPad.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("bro");
+            displayText.text = "Error";
         }
     }
 
