@@ -7,18 +7,23 @@ public class Enemies : MonoBehaviour
     public float rayLength =1f; //adjust ray length here
     public LayerMask PlayerMask; // assign "Player" layermask in here
 
+    public GameObject enemy;
+    public GameObject player;
+
+    public float enemyHealth = 5f;
+
     void Update()
     {
         TargetPlayer();
-       
+        KillEnemy();
     }
-      //function that creates a ray, if the gameobject with tag Player is in the ray the player gameobject will be destroyed  
+    //function that creates a ray, if the gameobject with tag player is in the ray the player gameobject will be destryed  
     void TargetPlayer()
     {
-        RaycastHit2D targetPoint = (Physics2D.Raycast(transform.position, -transform.right, rayLength,PlayerMask));
-        if (targetPoint.collider!=null&&targetPoint.collider.tag=="Player")
+        RaycastHit2D targetPoint = (Physics2D.Raycast(transform.position, -transform.right, rayLength, PlayerMask));
+        if (targetPoint.collider != null && targetPoint.collider.tag == "Player")
         {
-            
+
             Debug.Log("player is found");
             Destroy(GameObject.FindWithTag("Player"));
         }
@@ -27,10 +32,18 @@ public class Enemies : MonoBehaviour
             return;
         }
     }
-        //visual line that mimics the raycast.
+
+    public void KillEnemy()
+    {
+        if (enemyHealth <= 0)
+        {
+            Destroy(enemy);
+        }
+    }
+    //visual line that mimics the raycast.
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay (transform.position, -transform.right * rayLength);
+        Gizmos.DrawRay(transform.position, -transform.right * rayLength);
     }
 }
 

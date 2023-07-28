@@ -12,6 +12,8 @@ TagManager:
   - Player
   - Water
   - UI
+  - Enemy
+  - 
   - Left Black Puzzle
   - Right Black Puzzle
   - 
