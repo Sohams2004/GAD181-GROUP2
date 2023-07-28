@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemymovement : MonoBehaviour
 {
-    [SerializeField] float potrolSpeed = 1f;
+    [SerializeField] float patrolSpeed = 1f;
     [SerializeField] Transform[] patrolPoints;  //assign the 2 patrol points here ie point A and point B.
     [SerializeField] int patrolIndex;   
 
@@ -15,15 +15,17 @@ public class enemymovement : MonoBehaviour
         patrolRotation();
     }
         //function that moves the enemy to a certain point on the map
-    void Patroling(Vector2 positionToGo)
+    void Patroling(Vector3 positionToGo)
     {
-        transform.position = Vector2.Lerp(transform.position, positionToGo, Time.deltaTime * potrolSpeed);
+        //transform.position = Vector2.Lerp(transform.position, positionToGo, Time.deltaTime * patrolSpeed);
+        transform.position = Vector3.Lerp(new Vector3(transform.position.x, transform.position.y, transform.position.z), 
+            new Vector3(positionToGo.x, transform.position.y, transform.position.z), Time.deltaTime * patrolSpeed);
     }
         //function that moves the enemy to the point after the enemy have reached the first point
     void patrolToNextPoint() 
     {
        
-        float distance = Vector2.Distance(transform.position, patrolPoints[patrolIndex].position);
+        float distance = Vector3.Distance(transform.position, patrolPoints[patrolIndex].position);
         
             //check if enemy distance to the point is less or equal too 1 add a patrol point.
         if(distance <= 1)

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DoorClose
+  - gate1
+  - Floor
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,6 @@ TagManager:
   - 
   - Left Black Puzzle
   - Right Black Puzzle
-  - 
-  - 
   - 
   - 
   - 

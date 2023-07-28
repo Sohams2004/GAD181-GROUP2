@@ -15,14 +15,21 @@ public class PlayerAttack : MonoBehaviour
     public Vector2 repulseEnemy;
 
     public Rigidbody2D enemyrb;
-
+    public bool wallBro;
     public void Attack()
     {
         Collider2D[] attackEnemy = Physics2D.OverlapCircleAll(attack.transform.position, attackRange, enemyLayer);
 
         foreach(Collider2D enemy in attackEnemy)
         {
-            enemy.GetComponent<Enemies>().enemyHealth -= damage;
+            wallBro = true;
+            if (enemy.GetComponent<Enemies>())
+            {
+                enemy.GetComponent<Enemies>().enemyHealth -= damage;
+                //wallBro = true;
+                Debug.Log("Ad");
+                //wallBro = false;
+            }
         }
     }
 

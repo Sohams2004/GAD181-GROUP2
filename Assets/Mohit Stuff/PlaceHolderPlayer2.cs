@@ -7,7 +7,7 @@ public class PlaceHolderPlayer2 : MonoBehaviour
     float damageOverTime = 0f;
     float damageOverTimeInterval = 1f;
 
-    int playerHP = 100;
+    int playerHP = 5;
 
     GameObject gasWall;
     GameObject buttonOne;
@@ -70,7 +70,7 @@ public class PlaceHolderPlayer2 : MonoBehaviour
             if (damageOverTime > damageOverTimeInterval)
             {
                 damageOverTime = 0;
-                playerHP -= 5;
+                playerHP -= 1;
                 Debug.Log("it urrttss bruuu");
                 Debug.Log("health" + playerHP);
             }

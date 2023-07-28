@@ -270,6 +270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap collidors
       objectReference: {fileID: 0}
+    - target: {fileID: 1108884881233918924, guid: 51e66e3c7029b9e4ba790309d113d367, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51e66e3c7029b9e4ba790309d113d367, type: 3}
 --- !u!4 &5165656006272341635 stripped
