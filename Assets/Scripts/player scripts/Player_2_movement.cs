@@ -13,30 +13,28 @@ public class Player_2_movement : MonoBehaviour
 
     public BoxCollider2D P2_boxCollider2D;
     public Rigidbody2D player_2_rb;
-        
-        
-  
-
-    
-   
 
     void Start()
     {
-    	P2_boxCollider2D = GetComponent<BoxCollider2D>();	
+        P2_boxCollider2D = GetComponent<BoxCollider2D>();
         player_2_rb = GetComponent<Rigidbody2D>();
 
 
-    private void FixedUpdate()
-    {
-        float inputx = Input.GetAxis("Horizontal");
-
-        Vector2 playerMovement = new Vector2(movementSpeed * inputx, 0) * Time.deltaTime;
-        transform.Translate(playerMovement);
-
-        if (Input.GetKey(KeyCode.Space) && !jumpLimit)
+        void FixedUpdate()
         {
-            player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            jumpLimit = true;
+            float inputx = Input.GetAxis("Horizontal");
+
+            Vector2 playerMovement = new Vector2(movementSpeed * inputx, 0) * Time.deltaTime;
+            transform.Translate(playerMovement);
+
+            if (Input.GetKey(KeyCode.Space) && !jumpLimit)
+            {
+                player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                jumpLimit = true;
+            }
         }
     }
+
 }
+
+
