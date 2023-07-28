@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class interacticeKeypad : MonoBehaviour, I_interactable
+    
+    //this script is for the ingame botton with 2D box collider
+public class interactiveKeypad : MonoBehaviour, I_interactable
 {
+       //this is the keypad
     [SerializeField] GameObject keypadUI;
 
+    //function that enables and disables the keypad
     public void interactWithObject()
     {
         if (keypadUI.activeSelf)

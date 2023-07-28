@@ -180,8 +180,8 @@ GameObject:
   - component: {fileID: 298021052}
   - component: {fileID: 298021051}
   - component: {fileID: 298021054}
-  - component: {fileID: 298021055}
   - component: {fileID: 298021056}
+  - component: {fileID: 298021053}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -254,6 +254,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &298021053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298021050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d6148cf0c41be4896635ca7c40eb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &298021054
 Rigidbody2D:
   serializedVersion: 4
@@ -275,18 +287,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &298021055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298021050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d6148cf0c41be4896635ca7c40eb58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &298021056
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1188,10 +1188,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872989107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b018119e4a473f4aad0b46ae6cdae8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e20ffe89ca672d4089a54d47b037778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potrolSpeed: 1.7
+  potrolSpeed: 1
   patrolPoints:
   - {fileID: 876411773}
   - {fileID: 209328733}
@@ -1205,10 +1205,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872989107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a75c63048d4ade5409f20fa0aed0a1fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3397486989a840e4ca197a71ef125ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayLength: 2.5
+  rayLength: 2.15
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8

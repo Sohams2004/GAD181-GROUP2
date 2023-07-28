@@ -5,8 +5,8 @@ using UnityEngine;
 public class enemymovement : MonoBehaviour
 {
     [SerializeField] float potrolSpeed = 1f;
-    [SerializeField] Transform[] patrolPoints;
-    [SerializeField] int patrolIndex;
+    [SerializeField] Transform[] patrolPoints;  //assign the 2 patrol points here ie point A and point B.
+    [SerializeField] int patrolIndex;   
 
     void Update()
     {
@@ -20,7 +20,7 @@ public class enemymovement : MonoBehaviour
         transform.position = Vector2.Lerp(transform.position, positionToGo, Time.deltaTime * potrolSpeed);
     }
         //function that moves the enemy to the point after the enemy have reached the first point
-    void patrolToNextPoint()
+    void patrolToNextPoint() 
     {
        
         float distance = Vector2.Distance(transform.position, patrolPoints[patrolIndex].position);
@@ -36,6 +36,7 @@ public class enemymovement : MonoBehaviour
             return;
         }
     }
+        //function that rotates enemy 180 degrees when the enemy reaches the point
     void patrolRotation()
     {
         if (patrolIndex == 0)

@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Enemies : MonoBehaviour
 {
-    public float rayLength =1f;
-    public LayerMask PlayerMask;
+    public float rayLength =1f; //adjust ray length here
+    public LayerMask PlayerMask; // assign "Player" layermask in here
 
     void Update()
     {
         TargetPlayer();
        
     }
-      //function that creates a ray, if the gameobject with tag player is in the ray the player gameobject will be destryed  
+      //function that creates a ray, if the gameobject with tag Player is in the ray the player gameobject will be destroyed  
     void TargetPlayer()
     {
         RaycastHit2D targetPoint = (Physics2D.Raycast(transform.position, -transform.right, rayLength,PlayerMask));
@@ -20,7 +20,7 @@ public class Enemies : MonoBehaviour
         {
             
             Debug.Log("player is found");
-            //Destroy(GameObject.FindWithTag("Player") );
+            Destroy(GameObject.FindWithTag("Player"));
         }
         else
         {
