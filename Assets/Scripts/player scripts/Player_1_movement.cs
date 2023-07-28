@@ -8,11 +8,11 @@ public class Player_1_movement : MonoBehaviour
     public float jumpForce = 5;
     public bool jumpLimit;
     
-    public Rigidbody2D player_2_rb;
+    public Rigidbody2D player_1_rb;
 
     void Start()
     {
-        player_2_rb = GetComponent<Rigidbody2D>();
+        player_1_rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -24,7 +24,7 @@ public class Player_1_movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && !jumpLimit)
         {
-            player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            player_1_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpLimit = true;
         }
     }
