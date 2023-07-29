@@ -32,10 +32,11 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
+   
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("left ctrl"))
             Attack();
     }
 }

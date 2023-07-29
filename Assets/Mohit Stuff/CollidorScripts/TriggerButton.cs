@@ -7,7 +7,7 @@ public class TriggerButton : MonoBehaviour
     public bool inButtonOne;
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player2")
         {
 
             Debug.Log("he in?");
@@ -16,7 +16,7 @@ public class TriggerButton : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player2")
         {
             Debug.Log("he left");
             inButtonOne = false;

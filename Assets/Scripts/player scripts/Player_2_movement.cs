@@ -6,7 +6,7 @@ public class Player_2_movement : MonoBehaviour
 {
     public float movementSpeed = 10f;
     public float jumpForce = 5;
-    public bool isGrounded;
+    public bool isGrounded2;
 
     public Vector2 player2_Stand;
     public Vector2 player2_Crouch;
@@ -19,6 +19,7 @@ public class Player_2_movement : MonoBehaviour
     
     GameObject buttonOne;
     GameObject healTent2;
+
     [SerializeField] private Animator animatorButtonOne;
     [SerializeField] private Animator animatorGasWall;
 
@@ -31,6 +32,7 @@ public class Player_2_movement : MonoBehaviour
        
         buttonOne = GameObject.Find("button 1 opens gate save player");
         healTent2 = GameObject.Find("HealingStation (1)");
+      
     }
     private void FixedUpdate()
     {
@@ -39,10 +41,10 @@ public class Player_2_movement : MonoBehaviour
         player_2_rb.velocity = new Vector2(movementSpeed * inputx, player_2_rb.velocity.y);
 
 
-        if (Input.GetKey(KeyCode.Space) && !isGrounded)
+        if (Input.GetKey(KeyCode.Space) && !isGrounded2)
         {
             player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isGrounded = true;
+            isGrounded2 = true;
 
         }
 
@@ -63,7 +65,7 @@ public class Player_2_movement : MonoBehaviour
         if (collision2D.gameObject.tag == "Floor")
         {
             Debug.Log("i am gonna cry");
-            isGrounded = false;
+            isGrounded2 = false;
         }
     }
 
@@ -87,6 +89,7 @@ public class Player_2_movement : MonoBehaviour
             HealBruh(out playerHP);
             Debug.Log("healed2");
         }
+        
     }
 
     void HealBruh(out int value)

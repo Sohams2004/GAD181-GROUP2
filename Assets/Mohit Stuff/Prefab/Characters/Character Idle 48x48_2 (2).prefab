@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 4895556249923273710}
   - component: {fileID: 4895556249923273711}
   - component: {fileID: 4895556249923273708}
-  m_Layer: 0
+  - component: {fileID: 2108861428}
+  - component: {fileID: 2108861429}
+  m_Layer: 3
   m_Name: Character Idle 48x48_2 (2)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -162,7 +164,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4895556249923273709}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 542bac5c81fd1c241a7980c2e352b812, type: 3}
   m_Name: 
@@ -171,6 +173,47 @@ MonoBehaviour:
   animatorGasWall: {fileID: 0}
   m_speed: 10
   m_jumpForce: 13
+--- !u!114 &2108861428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4895556249923273709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0286337d294457043bffe0d5b08e3fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1
+  damage: 5
+  repulseForce: 0
+  attack: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  repulseEnemy: {x: 0, y: 0}
+  enemyrb: {fileID: 0}
+  wallBro: 0
+--- !u!114 &2108861429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4895556249923273709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283ac98402dd4f94e80f0299c2d70e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  jumpforce: 13
+  isGrounded: 0
+  player1_Stand: {x: 0, y: 0}
+  player1_Crouch: {x: 0, y: 0}
+  P1_boxCollider2D: {fileID: 4895556249923273710}
+  player_1_rb: {fileID: 4895556249923273711}
 --- !u!1 &4895556250600952563
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +225,7 @@ GameObject:
   - component: {fileID: 4895556250600952562}
   - component: {fileID: 4895556250600952572}
   - component: {fileID: 4895556250600952573}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}

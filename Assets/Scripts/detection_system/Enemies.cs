@@ -12,6 +12,8 @@ public class Enemies : MonoBehaviour
     public GameObject player2;
     public GameObject player1;
 
+    Turret turret;
+
     public float enemyHealth = 2f;
 
     public bool DamagePlayer;
@@ -19,10 +21,14 @@ public class Enemies : MonoBehaviour
     float damagePlayer = 0f;
     float damagePlayerTimeInterval = 1f;
 
+   // [SerializeField] private Animator animatorTurret;
+    [SerializeField] GameObject shooting;
+
     private void Start()
     {
         player2 = GameObject.Find("Player 2 Combat");
         player1 = GameObject.Find("Player 1 Stealth");
+        turret = FindAnyObjectByType<Turret>();
     }
     void Update()
     {
@@ -34,7 +40,7 @@ public class Enemies : MonoBehaviour
        
     }
     //function that creates a ray, if the gameobject with tag player is in the ray the player gameobject will be destryed  
-    void TargetPlayer()
+    public void TargetPlayer()
     {
 
 
@@ -46,13 +52,15 @@ public class Enemies : MonoBehaviour
             {
 
                 Debug.Log("player is found");
-               
+
 
                 if (damagePlayer > damagePlayerTimeInterval)
                 {
                     damagePlayer = 0;
-                    
-                   
+                    //animatorTurret.SetBool("Deploy", true);
+                    //shooting.SetActive(true);
+                    turret.TurretShooting();
+
                     Debug.Log("urt");
                     player1.GetComponent<Player_1_movement>().DamageMe2();
                 }
@@ -62,17 +70,26 @@ public class Enemies : MonoBehaviour
             {
 
                 Debug.Log("player2 is found");
-                
-               
+
+
                 if (damagePlayer > damagePlayerTimeInterval)
                 {
                     damagePlayer = 0;
                     Debug.Log("urt2");
                     player2.GetComponent<Player_2_movement>().DamageMe();
+                    //animatorTurret.SetBool("Deploy", true);
+                    //shooting.SetActive(true);
+                    turret.TurretShooting();
                 }
+            }
+            else 
+            {
+                //animatorTurret.SetBool("Deploy",false);
+                turret.TurretNotShooting();
             }
         }
     }
+    
 
     public void KillEnemy()
     {
