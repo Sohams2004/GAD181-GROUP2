@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 455f7bd05d5d05d4da673facf02500fd
   - enabled: 1
-    path: Assets/Scenes/Soham.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/LevelCoop.unity
+    guid: f8c856d565e0bfc47a0b761c56546692
+  - enabled: 1
+    path: Assets/Scenes/LevelSolo.unity
+    guid: 5e0b759d7b715704982f305bfdeaf432
   m_configObjects: {}

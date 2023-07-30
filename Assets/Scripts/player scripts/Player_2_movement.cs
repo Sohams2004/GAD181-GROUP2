@@ -14,7 +14,7 @@ public class Player_2_movement : MonoBehaviour
     public BoxCollider2D P2_boxCollider2D;
     public Rigidbody2D player_2_rb;
 
-    int playerHP = 10;
+    public int playerHP2 = 10;
     //gaswall the button and their animators 
     
     GameObject buttonOne;
@@ -86,7 +86,7 @@ public class Player_2_movement : MonoBehaviour
 
         if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
         {
-            HealBruh(out playerHP);
+            HealBruh(out playerHP2);
             Debug.Log("healed2");
         }
         
@@ -96,10 +96,11 @@ public class Player_2_movement : MonoBehaviour
     {
         value = 10;
     }
-    public void DamageMe()
+    public int DamageMe()
     {
-        playerHP -= 1;
-        print("hp" + playerHP);
+        playerHP2 -= 1;
+        print("hp" + playerHP2);
+        return playerHP2;
     }
 
 }

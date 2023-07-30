@@ -8,6 +8,8 @@ TagManager:
   - gate1
   - Floor
   - Player2
+  - ball
+  - gate2
   layers:
   - Default
   - TransparentFX

@@ -15,5 +15,7 @@ public class camera_follow : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position + offset;
+        transform.rotation = player.transform.rotation;
+        //transform.rotation = Quaternion.Euler(3.3f,15,0);
     }
 }

@@ -23,6 +23,7 @@ public class Keypad_functionality : MonoBehaviour
         if (displayText.text == passcode)
         {
             Destroy(GameObject.FindWithTag("gate1"));
+            Destroy(GameObject.FindWithTag("gate2"));
             keyPad.SetActive(false);
         }
     }
