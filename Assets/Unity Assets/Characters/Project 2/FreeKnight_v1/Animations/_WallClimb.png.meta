@@ -1,37 +1,28 @@
 fileFormatVersion: 2
-guid: c35ca4abd0b7f1e4599caac6b0a46038
+guid: 3c317ff3842464b458a81e201ae82e81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3984948888800490918
-    second: _AttackComboNoMovement_0
+      213: 6769693826079474279
+    second: _WallClimb_0
   - first:
-      213: -711078728889181417
-    second: _AttackComboNoMovement_1
+      213: 5459855066081006669
+    second: _WallClimb_1
   - first:
-      213: 3089235579767655581
-    second: _AttackComboNoMovement_2
+      213: 1558857537665335873
+    second: _WallClimb_2
   - first:
-      213: 2344322803747158021
-    second: _AttackComboNoMovement_3
+      213: -8649469661361463314
+    second: _WallClimb_3
   - first:
-      213: -5824371925146413656
-    second: _AttackComboNoMovement_4
+      213: -1232367395395290161
+    second: _WallClimb_4
   - first:
-      213: -9075705633980563542
-    second: _AttackComboNoMovement_5
+      213: 5811238955330113417
+    second: _WallClimb_5
   - first:
-      213: -4466299568123712580
-    second: _AttackComboNoMovement_6
-  - first:
-      213: 1331935041510976160
-    second: _AttackComboNoMovement_7
-  - first:
-      213: 8117863399146252174
-    second: _AttackComboNoMovement_8
-  - first:
-      213: 6818602343639179484
-    second: _AttackComboNoMovement_9
+      213: 2923827499168460333
+    second: _WallClimb_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -134,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _AttackComboNoMovement_0
+      name: _WallClimb_0
       rect:
         serializedVersion: 2
-        x: 28
+        x: 0
         y: 0
-        width: 37
-        height: 36
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a57a05b6e16d4730800000000000000
-      internalID: 3984948888800490918
+      spriteID: 7624f9ddaa8c2fd50800000000000000
+      internalID: 6769693826079474279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_1
+      name: _WallClimb_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 120
         y: 0
-        width: 64
-        height: 42
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b593dd9adb126f0800000000000000
-      internalID: -711078728889181417
+      spriteID: d4410ea414d45cb40800000000000000
+      internalID: 5459855066081006669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_2
+      name: _WallClimb_2
       rect:
         serializedVersion: 2
-        x: 282
+        x: 240
         y: 0
-        width: 63
-        height: 35
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c8c8f646b2fda20800000000000000
-      internalID: 3089235579767655581
+      spriteID: 1428bfbdbac22a510800000000000000
+      internalID: 1558857537665335873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_3
+      name: _WallClimb_3
       rect:
         serializedVersion: 2
-        x: 402
+        x: 360
         y: 0
-        width: 57
-        height: 34
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50872345b25b88020800000000000000
-      internalID: 2344322803747158021
+      spriteID: eef180b7b29e6f780800000000000000
+      internalID: -8649469661361463314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_4
+      name: _WallClimb_4
       rect:
         serializedVersion: 2
-        x: 511
+        x: 480
         y: 0
-        width: 36
-        height: 36
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a5d3e9c79cab2fa0800000000000000
-      internalID: -5824371925146413656
+      spriteID: fcbb0bc1260c5eee0800000000000000
+      internalID: -1232367395395290161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_5
+      name: _WallClimb_5
       rect:
         serializedVersion: 2
-        x: 627
+        x: 600
         y: 0
-        width: 40
-        height: 36
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aafb390afcd9c0280800000000000000
-      internalID: -9075705633980563542
+      spriteID: 98f0d556a0ba5a050800000000000000
+      internalID: 5811238955330113417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_6
+      name: _WallClimb_6
       rect:
         serializedVersion: 2
-        x: 748
+        x: 720
         y: 0
-        width: 75
-        height: 40
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,71 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb618dc4348402c0800000000000000
-      internalID: -4466299568123712580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _AttackComboNoMovement_7
-      rect:
-        serializedVersion: 2
-        x: 865
-        y: 0
-        width: 62
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aa28250ddbfb7210800000000000000
-      internalID: 1331935041510976160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _AttackComboNoMovement_8
-      rect:
-        serializedVersion: 2
-        x: 985
-        y: 0
-        width: 44
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e87e14150c178a070800000000000000
-      internalID: 8117863399146252174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _AttackComboNoMovement_9
-      rect:
-        serializedVersion: 2
-        x: 1105
-        y: 0
-        width: 43
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd0624d74ba80ae50800000000000000
-      internalID: 6818602343639179484
+      spriteID: d2e64709e95839820800000000000000
+      internalID: 2923827499168460333
       vertices: []
       indices: 
       edges: []

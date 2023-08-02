@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
     public bool wallBro;
     public void Attack()
     {
-        Collider2D[] attackEnemy = Physics2D.OverlapCircleAll(attack.transform.position, attackRange, enemyLayer);
+        Collider2D[] attackEnemy = Physics2D.OverlapCircleAll(/*/attack./*/transform.position, attackRange, enemyLayer);
 
         foreach(Collider2D enemy in attackEnemy)
         {
@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown("left ctrl"))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
             Attack();
     }
 }

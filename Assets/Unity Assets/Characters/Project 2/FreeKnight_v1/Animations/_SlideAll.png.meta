@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 5321afae8229de440970332b92f36a24
+guid: 691fc666d014c4643bf4423b418138da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6774723202295623862
-    second: _Dash_0
+      213: 5247734731389876649
+    second: _SlideAll_0
   - first:
-      213: -1114226136772084229
-    second: _Dash_1
+      213: 5817005001709876374
+    second: _SlideAll_1
+  - first:
+      213: 4358424702095892171
+    second: _SlideAll_2
+  - first:
+      213: -2021312223808744562
+    second: _SlideAll_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _Dash_0
+      name: _SlideAll_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1
-        width: 32
-        height: 33
+        x: 0
+        y: 0
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4f829b34295bf1a0800000000000000
-      internalID: -6774723202295623862
+      spriteID: 9a939fb3fe2b3d840800000000000000
+      internalID: 5247734731389876649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Dash_1
+      name: _SlideAll_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 1
-        width: 32
-        height: 33
+        x: 120
+        y: 0
+        width: 120
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +151,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd7e366b397980f0800000000000000
-      internalID: -1114226136772084229
+      spriteID: 694769faa372ab050800000000000000
+      internalID: 5817005001709876374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _SlideAll_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce96b4bc2c3c7c30800000000000000
+      internalID: 4358424702095892171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _SlideAll_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8399b7ed3bd2f3e0800000000000000
+      internalID: -2021312223808744562
       vertices: []
       indices: 
       edges: []

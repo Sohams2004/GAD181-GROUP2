@@ -19,7 +19,7 @@ public class Player_2_movement : MonoBehaviour
     
     GameObject buttonOne;
     GameObject healTent2;
-
+    Animator animator;
     [SerializeField] private Animator animatorButtonOne;
     [SerializeField] private Animator animatorGasWall;
 
@@ -27,7 +27,7 @@ public class Player_2_movement : MonoBehaviour
     {
         P2_boxCollider2D = GetComponent<BoxCollider2D>();
         player_2_rb = GetComponent<Rigidbody2D>();
-
+        animator= GetComponent<Animator>();
         //gets components from gasWall and button 1 scripts
        
         buttonOne = GameObject.Find("button 1 opens gate save player");
@@ -56,6 +56,8 @@ public class Player_2_movement : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
+        //Mathf Absolute makes it so be it minus or plus it will give back the number as positive, makes things easier for blendtree float
+        animator.SetFloat("Velocity", Mathf.Abs(player_2_rb.velocity.x));
     }
 
     // easier isGrounded for now, allows for unlimited jump without flying

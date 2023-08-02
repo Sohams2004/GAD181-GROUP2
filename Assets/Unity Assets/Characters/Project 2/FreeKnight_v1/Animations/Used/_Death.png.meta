@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: c35ca4abd0b7f1e4599caac6b0a46038
+guid: 6a8285bf70f062d429505827298cf984
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3984948888800490918
-    second: _AttackComboNoMovement_0
+      213: -6066306879103524113
+    second: _Death_0
   - first:
-      213: -711078728889181417
-    second: _AttackComboNoMovement_1
+      213: -2130260854859281059
+    second: _Death_1
   - first:
-      213: 3089235579767655581
-    second: _AttackComboNoMovement_2
+      213: -8387844239704481345
+    second: _Death_2
   - first:
-      213: 2344322803747158021
-    second: _AttackComboNoMovement_3
+      213: -5619066241937197591
+    second: _Death_3
   - first:
-      213: -5824371925146413656
-    second: _AttackComboNoMovement_4
+      213: -2896604702546001214
+    second: _Death_4
   - first:
-      213: -9075705633980563542
-    second: _AttackComboNoMovement_5
+      213: -4796269119335858697
+    second: _Death_5
   - first:
-      213: -4466299568123712580
-    second: _AttackComboNoMovement_6
+      213: 5986346763916639630
+    second: _Death_6
   - first:
-      213: 1331935041510976160
-    second: _AttackComboNoMovement_7
+      213: 2883202648186376338
+    second: _Death_7
   - first:
-      213: 8117863399146252174
-    second: _AttackComboNoMovement_8
+      213: -695858465623746701
+    second: _Death_8
   - first:
-      213: 6818602343639179484
-    second: _AttackComboNoMovement_9
+      213: 7283540774101742664
+    second: _Death_9
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -134,211 +134,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _AttackComboNoMovement_0
+      name: _Death_0
       rect:
         serializedVersion: 2
-        x: 28
+        x: 0
         y: 0
-        width: 37
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a57a05b6e16d4730800000000000000
-      internalID: 3984948888800490918
+      spriteID: fe2a68cb80620dba0800000000000000
+      internalID: -6066306879103524113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_1
+      name: _Death_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 120
         y: 0
-        width: 64
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b593dd9adb126f0800000000000000
-      internalID: -711078728889181417
+      spriteID: d5d41330a0bcf62e0800000000000000
+      internalID: -2130260854859281059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_2
+      name: _Death_2
       rect:
         serializedVersion: 2
-        x: 282
+        x: 240
         y: 0
-        width: 63
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c8c8f646b2fda20800000000000000
-      internalID: 3089235579767655581
+      spriteID: fb1ab1dca14689b80800000000000000
+      internalID: -8387844239704481345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_3
+      name: _Death_3
       rect:
         serializedVersion: 2
-        x: 402
+        x: 360
         y: 0
-        width: 57
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50872345b25b88020800000000000000
-      internalID: 2344322803747158021
+      spriteID: 9e5b1f726011502b0800000000000000
+      internalID: -5619066241937197591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_4
+      name: _Death_4
       rect:
         serializedVersion: 2
-        x: 511
+        x: 480
         y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a5d3e9c79cab2fa0800000000000000
-      internalID: -5824371925146413656
+      spriteID: 2c20502be513dc7d0800000000000000
+      internalID: -2896604702546001214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_5
+      name: _Death_5
       rect:
         serializedVersion: 2
-        x: 627
+        x: 600
         y: 0
-        width: 40
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aafb390afcd9c0280800000000000000
-      internalID: -9075705633980563542
+      spriteID: 7fd7fcec5aa307db0800000000000000
+      internalID: -4796269119335858697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_6
+      name: _Death_6
       rect:
         serializedVersion: 2
-        x: 748
+        x: 720
         y: 0
-        width: 75
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb618dc4348402c0800000000000000
-      internalID: -4466299568123712580
+      spriteID: e8d7f8d2aa6c31350800000000000000
+      internalID: 5986346763916639630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_7
+      name: _Death_7
       rect:
         serializedVersion: 2
-        x: 865
+        x: 840
         y: 0
-        width: 62
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa28250ddbfb7210800000000000000
-      internalID: 1331935041510976160
+      spriteID: 2905d9c5881330820800000000000000
+      internalID: 2883202648186376338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_8
+      name: _Death_8
       rect:
         serializedVersion: 2
-        x: 985
+        x: 960
         y: 0
-        width: 44
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87e14150c178a070800000000000000
-      internalID: 8117863399146252174
+      spriteID: 3775c8e8960d756f0800000000000000
+      internalID: -695858465623746701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_9
+      name: _Death_9
       rect:
         serializedVersion: 2
-        x: 1105
+        x: 1080
         y: 0
-        width: 43
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd0624d74ba80ae50800000000000000
-      internalID: 6818602343639179484
+      spriteID: 84478638eb5541560800000000000000
+      internalID: 7283540774101742664
       vertices: []
       indices: 
       edges: []

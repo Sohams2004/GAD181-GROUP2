@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5321afae8229de440970332b92f36a24
+guid: 2658025129b31cc458fde6258d3cfa25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6774723202295623862
-    second: _Dash_0
-  - first:
-      213: -1114226136772084229
-    second: _Dash_1
+      213: -3302175319379374981
+    second: _Crouch_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,43 +107,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _Dash_0
+      name: _Crouch_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1
-        width: 32
-        height: 33
+        x: 26
+        y: 0
+        width: 60
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4f829b34295bf1a0800000000000000
-      internalID: -6774723202295623862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Dash_1
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 1
-        width: 32
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfd7e366b397980f0800000000000000
-      internalID: -1114226136772084229
+      spriteID: b7c845eea015c22d0800000000000000
+      internalID: -3302175319379374981
       vertices: []
       indices: 
       edges: []

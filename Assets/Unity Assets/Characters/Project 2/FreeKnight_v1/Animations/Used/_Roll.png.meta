@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: c35ca4abd0b7f1e4599caac6b0a46038
+guid: 7fefd66887967a14a841eb62f14f9ce7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3984948888800490918
-    second: _AttackComboNoMovement_0
+      213: 1991978013701120253
+    second: _Roll_0
   - first:
-      213: -711078728889181417
-    second: _AttackComboNoMovement_1
+      213: -202818605549072326
+    second: _Roll_1
   - first:
-      213: 3089235579767655581
-    second: _AttackComboNoMovement_2
+      213: 1556186902649486473
+    second: _Roll_2
   - first:
-      213: 2344322803747158021
-    second: _AttackComboNoMovement_3
+      213: 8077958609940490686
+    second: _Roll_3
   - first:
-      213: -5824371925146413656
-    second: _AttackComboNoMovement_4
+      213: -9121563391726497418
+    second: _Roll_4
   - first:
-      213: -9075705633980563542
-    second: _AttackComboNoMovement_5
+      213: -9056606688895823417
+    second: _Roll_5
   - first:
-      213: -4466299568123712580
-    second: _AttackComboNoMovement_6
+      213: 4556565587350473879
+    second: _Roll_6
   - first:
-      213: 1331935041510976160
-    second: _AttackComboNoMovement_7
+      213: 5341982550336375304
+    second: _Roll_7
   - first:
-      213: 8117863399146252174
-    second: _AttackComboNoMovement_8
+      213: -1286366179472718315
+    second: _Roll_8
   - first:
-      213: 6818602343639179484
-    second: _AttackComboNoMovement_9
+      213: 4957621484318243354
+    second: _Roll_9
+  - first:
+      213: -3519438347738583683
+    second: _Roll_10
+  - first:
+      213: 3155953479660762474
+    second: _Roll_11
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -134,211 +140,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _AttackComboNoMovement_0
+      name: _Roll_0
       rect:
         serializedVersion: 2
-        x: 28
+        x: 0
         y: 0
-        width: 37
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a57a05b6e16d4730800000000000000
-      internalID: 3984948888800490918
+      spriteID: df02b03137de4ab10800000000000000
+      internalID: 1991978013701120253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_1
+      name: _Roll_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 120
         y: 0
-        width: 64
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b593dd9adb126f0800000000000000
-      internalID: -711078728889181417
+      spriteID: a3058668d817f2df0800000000000000
+      internalID: -202818605549072326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_2
+      name: _Roll_2
       rect:
         serializedVersion: 2
-        x: 282
+        x: 240
         y: 0
-        width: 63
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c8c8f646b2fda20800000000000000
-      internalID: 3089235579767655581
+      spriteID: 98cb9803ebfa89510800000000000000
+      internalID: 1556186902649486473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_3
+      name: _Roll_3
       rect:
         serializedVersion: 2
-        x: 402
+        x: 360
         y: 0
-        width: 57
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50872345b25b88020800000000000000
-      internalID: 2344322803747158021
+      spriteID: eb9afcf8e8caa1070800000000000000
+      internalID: 8077958609940490686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_4
+      name: _Roll_4
       rect:
         serializedVersion: 2
-        x: 511
+        x: 480
         y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a5d3e9c79cab2fa0800000000000000
-      internalID: -5824371925146413656
+      spriteID: 6715fef5c62b96180800000000000000
+      internalID: -9121563391726497418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_5
+      name: _Roll_5
       rect:
         serializedVersion: 2
-        x: 627
+        x: 600
         y: 0
-        width: 40
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aafb390afcd9c0280800000000000000
-      internalID: -9075705633980563542
+      spriteID: 7c110fd4338705280800000000000000
+      internalID: -9056606688895823417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_6
+      name: _Roll_6
       rect:
         serializedVersion: 2
-        x: 748
+        x: 720
         y: 0
-        width: 75
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb618dc4348402c0800000000000000
-      internalID: -4466299568123712580
+      spriteID: 79c4bcd824c2c3f30800000000000000
+      internalID: 4556565587350473879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_7
+      name: _Roll_7
       rect:
         serializedVersion: 2
-        x: 865
+        x: 840
         y: 0
-        width: 62
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa28250ddbfb7210800000000000000
-      internalID: 1331935041510976160
+      spriteID: 80a822593d8822a40800000000000000
+      internalID: 5341982550336375304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_8
+      name: _Roll_8
       rect:
         serializedVersion: 2
-        x: 985
+        x: 960
         y: 0
-        width: 44
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87e14150c178a070800000000000000
-      internalID: 8117863399146252174
+      spriteID: 516c37576c8e52ee0800000000000000
+      internalID: -1286366179472718315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _AttackComboNoMovement_9
+      name: _Roll_9
       rect:
         serializedVersion: 2
-        x: 1105
+        x: 1080
         y: 0
-        width: 43
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd0624d74ba80ae50800000000000000
-      internalID: 6818602343639179484
+      spriteID: a1a32af29720dc440800000000000000
+      internalID: 4957621484318243354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Roll_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d67223871782fc0800000000000000
+      internalID: -3519438347738583683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Roll_11
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6576d208f23ccb20800000000000000
+      internalID: 3155953479660762474
       vertices: []
       indices: 
       edges: []
