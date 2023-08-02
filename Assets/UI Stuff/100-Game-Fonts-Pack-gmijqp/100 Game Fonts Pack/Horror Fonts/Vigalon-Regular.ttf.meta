@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2c2419882b27f0543bbb5b9d3f16bf71
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vigalon
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b22af697e2892cd43b5f785c39597472, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

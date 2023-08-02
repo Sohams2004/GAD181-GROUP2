@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3b3ff98bfc2e3814bae199f62f448fe7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vudin
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e12c25c8a1f9822419516c50542be7e8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

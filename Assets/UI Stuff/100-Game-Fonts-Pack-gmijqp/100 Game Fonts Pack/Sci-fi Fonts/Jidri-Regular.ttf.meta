@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dc599ffc12730a84bb0ef1709091b5c4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Jidri
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 36a87b2d8fb66964392fadc98943c465, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

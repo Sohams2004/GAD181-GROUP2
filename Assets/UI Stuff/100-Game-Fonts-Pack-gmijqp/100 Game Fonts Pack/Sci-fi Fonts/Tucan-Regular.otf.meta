@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 38b6523029f05aa479191baced6cdb3a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tucan
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d15be1cffa42ae64d9d0780832e97981, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1e2750d55f96edd45b58bab47fb52b9b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Romda
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9ca66360b2f6d6a41a61bdca9fada567, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5f83f69311b2f164bac85f5b78b6b4f8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Iflar
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: aacdc2e96d89bb549abbe39f222910f7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

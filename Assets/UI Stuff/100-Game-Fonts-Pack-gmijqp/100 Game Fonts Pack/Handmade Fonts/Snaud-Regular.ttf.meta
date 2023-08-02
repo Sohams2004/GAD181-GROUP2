@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c55c584bbac460041b6b351799627fcb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Snaud
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7594b4021bdef0f498c92962979ea695, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

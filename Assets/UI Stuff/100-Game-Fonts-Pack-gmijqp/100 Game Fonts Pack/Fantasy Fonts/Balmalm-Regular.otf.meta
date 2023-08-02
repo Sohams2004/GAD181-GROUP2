@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ac1ec5be00fba454fb3710ebf66e3ea3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Balmalm
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 370dc98298b25674bbc202a3b0a33623, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3fedf8cd9ca118249a39ddeedd6bb036
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sulleon
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f8a038cc42dd7d64ba33686428414cc9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 91fe6081ca5eea440930fe66951e6fa9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Thados
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9145f4530a1cdb1478c65755edeb9339, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

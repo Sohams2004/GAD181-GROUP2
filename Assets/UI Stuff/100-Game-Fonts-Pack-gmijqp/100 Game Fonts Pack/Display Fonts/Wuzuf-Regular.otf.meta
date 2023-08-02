@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0b8f49ae61819ee45b44c21ba4b655a1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Wuzuf
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6067185b47a02b84687587b4be417d6a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bc8cbc5d39c5dd141b6782540ab95d35
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Nimia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2a8e08a59efed3e449d9f1b8076fcc24, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: befd47fdaf8cd344e84f58e5f511f6f0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Edward
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 358691d436b3b6143a791abbf4eba43e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

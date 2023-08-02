@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cc090601f37e40748ba2af8c3a7399f7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Nafar
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6768499a80cb78e41b79a6870b205372, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

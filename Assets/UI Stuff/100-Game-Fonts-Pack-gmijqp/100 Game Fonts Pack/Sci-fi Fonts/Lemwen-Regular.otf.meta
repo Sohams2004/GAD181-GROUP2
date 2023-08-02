@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e7794b8e8e6ddd24c807e86a2a2ea86f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lemwen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4378ef66845f26c419ee67cf26b3c09b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

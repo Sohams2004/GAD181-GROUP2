@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6aae05495ac238d41910c6590ade8b12
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Zamos
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 033c1121a1448f445997ad50ab7e0d3f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2e62267b1fef95f4ab865549b9b2e811
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tomdur
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6537ee1e1f55bd44c89cb56bcea815d7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

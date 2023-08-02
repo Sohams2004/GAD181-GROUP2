@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cd8964c77a18fd448badc31b22742efb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lorkil
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 181aa75c9ad5dc94da59756f6a8d2b2c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

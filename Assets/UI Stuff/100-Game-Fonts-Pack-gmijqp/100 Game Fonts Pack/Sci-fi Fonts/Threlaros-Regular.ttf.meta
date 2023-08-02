@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b980d5425dca93749ab0d06c2d7de26e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Threlaros
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a868a1e42f65c574ab53f480d2923caf, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

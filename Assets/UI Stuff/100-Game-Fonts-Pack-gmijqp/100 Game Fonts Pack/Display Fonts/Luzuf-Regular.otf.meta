@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cca99798d2a8dda48b7c1fb401e89e8a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Luzuf
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: aabdce1b3479e5145a89bc3e1cd1c48b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

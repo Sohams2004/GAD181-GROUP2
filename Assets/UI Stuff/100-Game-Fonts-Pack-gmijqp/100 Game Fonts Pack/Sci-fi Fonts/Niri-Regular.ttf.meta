@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bdf203cff5e995246802c4e31e72ece5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Niri
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 79b200ad3c745754e9d691e55d0940b6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

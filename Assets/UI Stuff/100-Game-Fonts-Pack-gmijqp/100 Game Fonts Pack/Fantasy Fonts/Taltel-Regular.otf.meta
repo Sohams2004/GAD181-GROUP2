@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bc399bd175f3fc74d854f339c68db497
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Taltel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d7b23704c76cadc4ab51b7aa2a6af9a4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7f57c00f0164f434d9c452307ea6141a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lilma
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 00ed9a5fa22ad6f42a131e38a6c160c2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 38983861d687fd94ab6de760216ac0b3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mirlad
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 53ff3315223e52d4e94b784fecf97af2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

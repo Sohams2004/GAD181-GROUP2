@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f655d60b5367b524f9f68848a2111884
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Verne
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 750303d77edc06a4cb51a9cfea25a169, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

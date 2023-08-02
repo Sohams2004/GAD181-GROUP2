@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 343b8cde05ae5d244914483982b65e54
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Limiy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b33a7da9c3f1e6e42b306595e8ee9386, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

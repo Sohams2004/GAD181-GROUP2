@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5c8f4c25d79390c4880ebbb839ac7b91
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Gurdihn
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 86194a44f9e227f4599262caf29f5469, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

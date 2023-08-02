@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4e31551f82cd62245ace6b38455a8ba8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Holor
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8079c946f268847468e223bab5a2ff30, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

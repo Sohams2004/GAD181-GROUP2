@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ce9c8631536992244b7e5fab6dba794a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Gyrliacelm
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9899730f04c13e74f82c5f80c329f5ee, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

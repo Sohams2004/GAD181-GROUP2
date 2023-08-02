@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e87718a0931d26a41ad1246bcaf96b6f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Yiwil
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 06b2cad6706b01b4d8c95136ed02f277, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

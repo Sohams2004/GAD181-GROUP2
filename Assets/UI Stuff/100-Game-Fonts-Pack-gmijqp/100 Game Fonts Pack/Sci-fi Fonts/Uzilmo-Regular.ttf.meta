@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6e46b1a40f28f6e44910a4f80de29c71
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Uzilmo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f0ac4629af86c5d41ae980be3aec067f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

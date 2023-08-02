@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 147e73a9d9da6354f8d9ff669bdfbad2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Madlam
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 20d51ecff21b0d14185df3479e408d02, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

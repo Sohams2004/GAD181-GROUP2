@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6afc319aa8497fa4c9eca3a175b09082
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Harlasan
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 50a31877bf2457e489e7ca32d56175b8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,7 +7,7 @@ public class TriggerDoor : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Animator animator2;
     [SerializeField] private Animator animator3;
-
+    [SerializeField] GameObject TUNNELDOOR;
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -15,6 +15,7 @@ public class TriggerDoor : MonoBehaviour
             animator.SetBool( "CloseDoor", true);
             animator2.SetBool("StartGas", true); 
             animator3.SetBool("AlertEnemies", true);
+            TUNNELDOOR.SetActive(false);
         }
     }
 }

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5a5a79ee1368eaa4a8a082cf7bdb1a38
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mapillor
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d10b86a359f159045adc76ed79de333f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

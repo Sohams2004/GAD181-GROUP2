@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9bf787bab33e9844e944ca2779f2a9a0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Norkah
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c7fab3bc361a004448ad9a50928c7aff, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

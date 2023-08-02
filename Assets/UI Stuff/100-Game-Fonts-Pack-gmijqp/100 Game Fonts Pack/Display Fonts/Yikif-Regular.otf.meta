@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c862b64e84fd8574796623e9bc046015
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Yikif
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0791affff7f20704880e557baede9215, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9ecacc2ae8ce1184f9a964f9d34e7b42
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fumuz
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 048cf1b7fbc8b6245855fd7e54596e75, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

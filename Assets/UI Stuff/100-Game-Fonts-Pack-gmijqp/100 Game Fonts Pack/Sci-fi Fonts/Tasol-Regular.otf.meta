@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2431609185b7dcc4bae7e5dcc29713fd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tasol
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f238a2731f06da84389a807d377d2dd3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

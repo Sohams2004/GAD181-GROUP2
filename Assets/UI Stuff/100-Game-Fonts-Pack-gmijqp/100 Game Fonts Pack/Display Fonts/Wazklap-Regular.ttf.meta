@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ea1965b6ea0315a48a666a73c26b3089
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Wazklap
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 49bf9739ccb6c6e418cfbe42a92cf881, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

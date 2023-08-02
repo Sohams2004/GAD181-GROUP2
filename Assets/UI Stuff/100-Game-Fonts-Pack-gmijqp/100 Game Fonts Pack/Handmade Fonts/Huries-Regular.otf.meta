@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3d94131755d19fd45a0c561edf385f12
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Huries
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ea72b72daccdab44fa8880be61fed396, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

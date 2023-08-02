@@ -41,7 +41,7 @@ public class Player_2_movement : MonoBehaviour
         player_2_rb.velocity = new Vector2(movementSpeed * inputx, player_2_rb.velocity.y);
 
 
-        if (Input.GetKey(KeyCode.Space) && !isGrounded2)
+        if (Input.GetKey(KeyCode.W) && !isGrounded2)
         {
             player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isGrounded2 = true;

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e6774d2b7f8520c4482dab431fcab479
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lumphrel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a3af847c5886a7444881246388ef95c2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

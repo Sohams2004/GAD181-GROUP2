@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fd62f09ecfedd7f479db849aa41e3261
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pamaw
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7ab4f06d09383e64c9b866629235aea5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

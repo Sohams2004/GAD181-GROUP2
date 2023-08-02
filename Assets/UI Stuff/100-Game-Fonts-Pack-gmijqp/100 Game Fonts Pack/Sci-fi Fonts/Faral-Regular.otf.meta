@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c35ac9b5673b0a04b8a8253688dc7727
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Faral
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 91842ab081950394394c4f72fa8a8332, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7621c868c19a7054191910b330bf3539
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ludieh
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 31124792345dca84db631f00d95f5540, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

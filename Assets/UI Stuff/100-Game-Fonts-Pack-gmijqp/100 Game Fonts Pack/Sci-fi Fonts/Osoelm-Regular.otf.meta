@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0cbbf61d0a62b47499e575609f7ac46d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Osoelm
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 65f665082f9a00c42a1dbfcddea54f84, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
