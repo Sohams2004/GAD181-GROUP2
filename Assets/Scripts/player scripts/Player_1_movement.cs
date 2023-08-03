@@ -11,15 +11,18 @@ public class Player_1_movement : MonoBehaviour
     public Vector2 player1_Stand;
     public Vector2 player1_Crouch;
 
+    bool isCrouch;
+
     public BoxCollider2D P1_boxCollider2D;
     public Rigidbody2D player_1_rb;
 
+    public int playerHP = 4;
 
     GameObject gasWall;
     //Damage overtime variable for gaswall
     float damageOverTime = 0f;
     float damageOverTimeInterval = 1f;
-    public int playerHP = 10;
+    
 
     GameObject healTent1;
     GameObject hideSpot;
@@ -84,15 +87,17 @@ public class Player_1_movement : MonoBehaviour
     public void Update()
     {
         //This for polish next project
-        /*if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.RightShift))
         {
+            isCrouch = true;
             P1_boxCollider2D.size = player1_Crouch;
         }
 
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.RightShift))
         {
+            isCrouch = false;
             P1_boxCollider2D.size = player1_Stand;
-        }*/
+        }
 
         //mohit here bringing my code over here from placeholder player 2 as it is part of player 1 script
         // if gasWall's bool inGas true then damage player 1 damage per second and print for now, visual and sound later
@@ -128,10 +133,9 @@ public class Player_1_movement : MonoBehaviour
         //this function just does not want to work
         if (hideSpot.GetComponent<TriggerCrouch>().inHide == true)
         {
-            Debug.Log("Crouch?");
-            if (Input.GetKeyDown(KeyCode.RightShift))
+            
+            if (isCrouch)
             {
-                Debug.Log("Crouch");
                 gameObject.layer = 2;
                 animatorEnemyWalkBy.SetBool("GoOn", true);
             }
@@ -139,17 +143,16 @@ public class Player_1_movement : MonoBehaviour
         }
         else if (hideSpot1.GetComponent<TriggerCrouch>().inHide == true)
         {
-            Debug.Log("Crouch?2");
-            if (Input.GetKeyDown(KeyCode.RightShift))
+            
+            if (isCrouch)
             {
-                Debug.Log("Crouch2");
                 gameObject.layer = 2;
             }
         }
 
         if (hideSpot.GetComponent<TriggerCrouch>().inHide == false && hideSpot1.GetComponent<TriggerCrouch>().inHide == false)
         {
-            Debug.Log("i cri");
+            //Debug.Log("i cri");
             gameObject.layer = 3;
         }
 

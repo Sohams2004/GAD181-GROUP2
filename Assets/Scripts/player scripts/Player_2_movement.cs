@@ -9,12 +9,15 @@ public class Player_2_movement : MonoBehaviour
     public bool isGrounded2;
 
     public Vector2 player2_Stand;
+   
     public Vector2 player2_Crouch;
+
+    //bool isCrouch;
 
     public BoxCollider2D P2_boxCollider2D;
     public Rigidbody2D player_2_rb;
 
-    public int playerHP2 = 10;
+    public int playerHP2 = 5;
     //gaswall the button and their animators 
     
     GameObject buttonOne;
@@ -38,26 +41,54 @@ public class Player_2_movement : MonoBehaviour
     {
         float inputx = Input.GetAxis("Horizontal");
 
-        player_2_rb.velocity = new Vector2(movementSpeed * inputx, player_2_rb.velocity.y);
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")
+            || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(0).IsName("Death")
+            || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
+        {
+            player_2_rb.velocity= new Vector2(0, player_2_rb.velocity.y);
+        }
+        else
+        {
 
+            player_2_rb.velocity = new Vector2(movementSpeed * inputx, player_2_rb.velocity.y);
 
-        if (Input.GetKey(KeyCode.W) && !isGrounded2)
+            if (inputx > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+            if (inputx < 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+
+        }
+        if (Input.GetKey(KeyCode.W) && isGrounded2)
         {
             player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isGrounded2 = true;
+            isGrounded2 = false;
 
+            animator.SetBool("IsGrounded2", false);
+            animator.SetBool("Jump", true);
+            
         }
-
-        if (inputx > 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        if (inputx < 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
+        
+        
         //Mathf Absolute makes it so be it minus or plus it will give back the number as positive, makes things easier for blendtree float
-        animator.SetFloat("Velocity", Mathf.Abs(player_2_rb.velocity.x));
+        animator.SetFloat("xVelocity", Mathf.Abs(player_2_rb.velocity.x));
+
+        //I may not need mathF now that turning animation requires - value i believe lets see
+        //nah will keep this for later as desirable, can keep trun around outside blentree,
+        //turn around needs friction player brake cause of speed then rotate complete.
+        //Or when animation curve
+        //animator.SetFloat("xVelocity", player_2_rb.velocity.x);
+
+        animator.SetFloat("yVelocity", player_2_rb.velocity.y);
+        /*/
+         * aaa
+         * 
+        /*/
+
+        
     }
 
     // easier isGrounded for now, allows for unlimited jump without flying
@@ -67,13 +98,30 @@ public class Player_2_movement : MonoBehaviour
         if (collision2D.gameObject.tag == "Floor")
         {
             Debug.Log("i am gonna cry");
-            isGrounded2 = false;
+            isGrounded2 = true;
+            animator.SetBool("IsGrounded2", true);
+            animator.SetBool("Jump", false);
         }
     }
 
     //mohit here bringing my code over here from placeholder player 2 as it is part of player 2 script
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            //isCrouch = true;
+            P2_boxCollider2D.offset= new Vector2(P2_boxCollider2D.offset.x,-0.09f);
+            P2_boxCollider2D.size = player2_Crouch;
+            animator.SetBool("Crouch", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            //isCrouch = false;
+            P2_boxCollider2D.offset = new Vector2(P2_boxCollider2D.offset.x, -0.005058818f);
+            P2_boxCollider2D.size = player2_Stand;
+            animator.SetBool("Crouch", false);
+        }
 
         if (buttonOne.GetComponent<TriggerButton>().inButtonOne == true)
         {
@@ -102,7 +150,15 @@ public class Player_2_movement : MonoBehaviour
     {
         playerHP2 -= 1;
         print("hp" + playerHP2);
+
+      
+        if (playerHP2 <= 0)
+        {
+            animator.SetBool("Die", true);
+        }
         return playerHP2;
+
+
     }
 
 }

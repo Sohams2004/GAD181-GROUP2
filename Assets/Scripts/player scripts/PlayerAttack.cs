@@ -7,8 +7,13 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange = 1f;
     public float damage = 5f;
     public float repulseForce;
-    
-    public GameObject attack;
+
+    //For combo attack
+    bool attack;
+    int attackCounter;
+    Animator animator;
+
+    //public GameObject attack;
 
     public LayerMask enemyLayer;
 
@@ -16,11 +21,19 @@ public class PlayerAttack : MonoBehaviour
 
     public Rigidbody2D enemyrb;
     public bool wallBro;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     public void Attack()
     {
         Collider2D[] attackEnemy = Physics2D.OverlapCircleAll(/*/attack./*/transform.position, attackRange, enemyLayer);
 
-        foreach(Collider2D enemy in attackEnemy)
+        animator.SetTrigger("Attack");
+        attack = true;
+        foreach (Collider2D enemy in attackEnemy)
         {
             wallBro = true;
             if (enemy.GetComponent<Enemies>())
@@ -29,14 +42,43 @@ public class PlayerAttack : MonoBehaviour
                 //wallBro = true;
                 Debug.Log("Ad");
                 //wallBro = false;
+                
             }
         }
     }
-   
+
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
-            Attack();
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crouch & Crouch walk") || 
+                animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack")) 
+            {
+                
+                Attack();
+                
+            }
+
+            else
+            {
+
+                if (!attack)
+                {
+                    Attack();
+                    attackCounter++;
+                    animator.SetInteger("AttackCounter", attackCounter);
+
+                    if (attackCounter >= 2)
+                    {
+                        attackCounter = 0;
+                    }
+                }    
+                
+                attack = false;
+            }
+           
+        }
+        
     }
 }
