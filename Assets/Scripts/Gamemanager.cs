@@ -12,6 +12,7 @@ public class Gamemanager : MonoBehaviour
     public bool toggleCharacters;
 
     public GameObject player1, player2;
+    public GameObject pauseScreen;
 
     public Player_1_movement player1Movement;
     public Player_2_movement player2Movement;
@@ -20,31 +21,33 @@ public class Gamemanager : MonoBehaviour
 
     public bool SinglePlayer;
     public bool Coop;
+    public bool isPaused = false;
     //public bool dead;
 
-   // public GameObject playerOne;
-   // public GameObject playerTwo;
-    
+    // public GameObject playerOne;
+    // public GameObject playerTwo;
+
     void OnEnable()
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if(scene.name == "LevelSolo")
+        if (scene.name == "LevelSolo")
         {
             SinglePlayer = true;
             Coop = false;
         }
-        if(scene.name == "LevelCoop")
+        if (scene.name == "LevelCoop")
         {
             Coop = true;
             SinglePlayer = false;
         }
     }
 
-    private void Start()
+    public void Start()
     {
-        
+        pauseScreen.SetActive(false);
     }
+
     void Update()
     {
         if (SinglePlayer == true)
@@ -65,9 +68,10 @@ public class Gamemanager : MonoBehaviour
             Invoke("GameOver", 1.1f);
         }
 
+        ScreenPause();
     }
 
-   
+
     void ToggleCharacters()
     {
 
@@ -96,21 +100,21 @@ public class Gamemanager : MonoBehaviour
     }
     public void RetrySingle()
     {
-        
-            Time.timeScale = 1;
-            SceneManager.LoadScene("LevelSolo");
-            Debug.Log(" singplye player i cri otherwise i work yes");
-        
-        
+
+        Time.timeScale = 1;
+        SceneManager.LoadScene("LevelSolo");
+        Debug.Log(" singplye player i cri otherwise i work yes");
+
+
     }
     public void RetryCoop()
     {
-        
-        
-            Time.timeScale = 1;
-            SceneManager.LoadScene("LevelCoop");
-            Debug.Log(" ocoop i work yes i cri otherwise");
-        
+
+
+        Time.timeScale = 1;
+        SceneManager.LoadScene("LevelCoop");
+        Debug.Log(" ocoop i work yes i cri otherwise");
+
     }
 
     public void GameOver()
@@ -120,6 +124,34 @@ public class Gamemanager : MonoBehaviour
 
     }
 
+    public void ScreenPause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            Time.timeScale = 0;
+            pauseScreen.SetActive(true);
+            isPaused = true;
+        }
+
+        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
+        {
+            Time.timeScale = 1;
+            pauseScreen.SetActive(false);
+            isPaused = false;
+        }
+    }
+
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseScreen.SetActive(false);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     /*/
     public void GameOver()
     {
