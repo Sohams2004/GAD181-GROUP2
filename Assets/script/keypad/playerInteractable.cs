@@ -5,8 +5,10 @@ using UnityEngine;
 public class playerInteractable : MonoBehaviour
 {
     I_interactable interactable;
-    bool playerEnterTrigger; //bool that tells if player is in 2D box collider or not
+    public bool playerEnterTrigger; //bool that tells if player is in 2D box collider or not
 
+
+    public GameObject keyPad;
     //if player enters 2D box collider, set playerEnterTrigger=true
     private void OnTriggerEnter2D(Collider2D collision)
     { 
@@ -38,6 +40,8 @@ public class playerInteractable : MonoBehaviour
                 interactable.interactWithObject();
                 Debug.Log("E");
             }
+                      
+            //playerMovement.enabled = false;
         }
     }
 }

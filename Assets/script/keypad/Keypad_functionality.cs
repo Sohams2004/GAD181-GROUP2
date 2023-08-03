@@ -33,5 +33,10 @@ public class Keypad_functionality : MonoBehaviour
     {
         displayText.text = "";
     }
+
+    public void closeKeypad()
+    {
+        keyPad.SetActive(false);
+    }
 }
 
