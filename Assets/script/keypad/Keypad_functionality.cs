@@ -18,14 +18,36 @@ public class Keypad_functionality : MonoBehaviour
     // this function is for the green button
     // check if the code is correct
     //if code is correct destroy gate ("gate1") and disable keypad
-    public void checkWhetherCodeIsCorrect()
+    public IEnumerator checkWhetherCodeIsCorrect()
     {
         if (displayText.text == passcode)
         {
             Destroy(GameObject.FindWithTag("gate1"));
             Destroy(GameObject.FindWithTag("gate2"));
+            displayText.text = "Correct";
+            yield return new WaitForSeconds(1);
             keyPad.SetActive(false);
         }
+    }
+
+    public IEnumerator KeypadFeedback()
+    {
+        if (displayText.text != passcode)
+        {
+            displayText.text = "Error";
+            yield return new WaitForSeconds(1);
+            displayText.text = "";
+        }
+    }
+
+    public void StartCoroutineKeypadFeedback()
+    {
+        StartCoroutine(KeypadFeedback());
+    }
+
+    public void StartCoroutineCodeCorrect()
+    {
+        StartCoroutine(checkWhetherCodeIsCorrect());
     }
     // this is attached to the red button on the keypad.
     //clears all text
