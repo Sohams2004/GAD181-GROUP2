@@ -6981,7 +6981,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00013609976}
+  m_Offset: {x: 0, y: -0.0050588176}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6992,7 +6992,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19, y: 0.36911136}
+  m_Size: {x: 0.19, y: 0.37950122}
   m_EdgeRadius: 0
 --- !u!95 &1212127618
 Animator:
@@ -7074,7 +7074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212127616}
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -23.24, y: 5.1, z: 97.14}
+  m_LocalPosition: {x: 50.99, y: 5.1, z: 97.14}
   m_LocalScale: {x: 9.527301, y: 9.5273, z: 9.5273}
   m_Children:
   - {fileID: 1041001286}
@@ -7150,8 +7150,8 @@ MonoBehaviour:
   movementSpeed: 10
   jumpForce: 15
   isGrounded2: 0
-  player2_Stand: {x: 0, y: 0}
-  player2_Crouch: {x: 0, y: 0}
+  player2_Stand: {x: 0.19, y: 0.3795012}
+  player2_Crouch: {x: 0.19, y: 0.2}
   P2_boxCollider2D: {fileID: 1212127617}
   player_2_rb: {fileID: 1212127621}
   playerHP2: 10
@@ -7172,7 +7172,6 @@ MonoBehaviour:
   attackRange: 1
   damage: 5
   repulseForce: 0
-  attack: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -14296,8 +14295,8 @@ MonoBehaviour:
   movementSpeed: 10
   jumpforce: 15
   isGrounded: 0
-  player1_Stand: {x: 0, y: 0}
-  player1_Crouch: {x: 0, y: 0}
+  player1_Stand: {x: 0.19, y: 0.26}
+  player1_Crouch: {x: 0.1, y: 0.1}
   P1_boxCollider2D: {fileID: 713803963}
   player_1_rb: {fileID: 713803962}
   playerHP: 10
@@ -14318,7 +14317,6 @@ MonoBehaviour:
   attackRange: 1
   damage: 5
   repulseForce: 0
-  attack: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
