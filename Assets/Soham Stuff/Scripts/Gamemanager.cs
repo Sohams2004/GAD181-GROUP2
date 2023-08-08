@@ -46,6 +46,7 @@ public class Gamemanager : MonoBehaviour
     public void Start()
     {
         pauseScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -65,6 +66,7 @@ public class Gamemanager : MonoBehaviour
 
         if (player2Movement.GetComponent<Player_2_movement>().playerHP2 <= 0)
         {
+            Debug.Log("player ded bro");
             Invoke("GameOver", 1.1f);
         }
 
@@ -98,15 +100,15 @@ public class Gamemanager : MonoBehaviour
             cameraFollow.player = player1;
         }
     }
-    public void RetrySingle()
-    {
+    /*/ public void RetrySingle()
+     {
 
-        Time.timeScale = 1;
-        SceneManager.LoadScene("LevelSolo");
-        Debug.Log(" singplye player i cri otherwise i work yes");
+         Time.timeScale = 1;
+         SceneManager.LoadScene("LevelSolo");
+         Debug.Log(" singplye player i cri otherwise i work yes");
 
 
-    }
+     }/*/
     public void RetryCoop()
     {
 

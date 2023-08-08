@@ -9,6 +9,8 @@ public class Keypad_functionality : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayText;   //attach the text here
     [SerializeField] GameObject keyPad;     //attach the keypad here
 
+    public Player_2_movement playerMovement;
+
     //this function prints the numbers
     //attach this function to the buttons in the inspector and pick the displayed text (string number)
     public void numberToPrintOut(string number)
@@ -27,6 +29,7 @@ public class Keypad_functionality : MonoBehaviour
             displayText.text = "Correct";
             yield return new WaitForSeconds(1);
             keyPad.SetActive(false);
+            playerMovement.enabled = true;
         }
     }
 
@@ -59,6 +62,7 @@ public class Keypad_functionality : MonoBehaviour
     public void closeKeypad()
     {
         keyPad.SetActive(false);
+        playerMovement.enabled = true;
     }
 }
 

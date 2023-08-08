@@ -17,9 +17,9 @@ public class PlayerAttack : MonoBehaviour
 
     public LayerMask enemyLayer;
 
-    public Vector2 repulseEnemy;
+    //public Vector2 repulseEnemy;
 
-    public Rigidbody2D enemyrb;
+    //public Rigidbody2D enemyrb;
     public bool wallBro;
 
     private void Start()

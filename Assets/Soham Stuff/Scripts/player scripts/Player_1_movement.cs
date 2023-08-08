@@ -90,13 +90,13 @@ public class Player_1_movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
             isCrouch = true;
-            P1_boxCollider2D.size = player1_Crouch;
+            //P1_boxCollider2D.size = player1_Crouch;
         }
 
         if (Input.GetKeyUp(KeyCode.RightShift))
         {
             isCrouch = false;
-            P1_boxCollider2D.size = player1_Stand;
+            //P1_boxCollider2D.size = player1_Stand;
         }
 
         //mohit here bringing my code over here from placeholder player 2 as it is part of player 1 script

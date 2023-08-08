@@ -26,6 +26,11 @@ public class Player_2_movement : MonoBehaviour
     [SerializeField] private Animator animatorButtonOne;
     [SerializeField] private Animator animatorGasWall;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip buttonPress;
+
+
+    //GameObject playerKeypadMovement;
     void Start()
     {
         P2_boxCollider2D = GetComponent<BoxCollider2D>();
@@ -35,17 +40,33 @@ public class Player_2_movement : MonoBehaviour
        
         buttonOne = GameObject.Find("button 1 opens gate save player");
         healTent2 = GameObject.Find("HealingStation (1)");
-      
+
+        //playerKeypadMovement = GameObject.Find("button");
     }
     private void FixedUpdate()
     {
-        float inputx = Input.GetAxis("Horizontal");
 
+        // if (playerKeypadMovement.GetComponent<interactiveKeypad>().playerMove == true)
+        // {
+        //    Debug.Log("iyea");
+        // }
+        // else
+        // {
+        //Debug.Log("ahah");
+        Movement();
+        Jump();
+        // }
+
+    }
+
+    void Movement()
+    {
+        float inputx = Input.GetAxis("Horizontal");
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")
-            || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(0).IsName("Death")
-            || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
+           || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(0).IsName("Death")
+           || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
         {
-            player_2_rb.velocity= new Vector2(0, player_2_rb.velocity.y);
+            player_2_rb.velocity = new Vector2(0, player_2_rb.velocity.y);
         }
         else
         {
@@ -62,17 +83,6 @@ public class Player_2_movement : MonoBehaviour
             }
 
         }
-        if (Input.GetKey(KeyCode.W) && isGrounded2)
-        {
-            player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isGrounded2 = false;
-
-            animator.SetBool("IsGrounded2", false);
-            animator.SetBool("Jump", true);
-            
-        }
-        
-        
         //Mathf Absolute makes it so be it minus or plus it will give back the number as positive, makes things easier for blendtree float
         animator.SetFloat("xVelocity", Mathf.Abs(player_2_rb.velocity.x));
 
@@ -87,10 +97,19 @@ public class Player_2_movement : MonoBehaviour
          * aaa
          * 
         /*/
-
-        
     }
+    void Jump()
+    {
+        if (Input.GetKey(KeyCode.W) && isGrounded2)
+        {
+            player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            isGrounded2 = false;
 
+            animator.SetBool("IsGrounded2", false);
+            animator.SetBool("Jump", true);
+
+        }
+    }
     // easier isGrounded for now, allows for unlimited jump without flying
     // if player touchs ground it is grounded
     void OnCollisionEnter2D(Collision2D collision2D)
@@ -118,7 +137,7 @@ public class Player_2_movement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             //isCrouch = false;
-            P2_boxCollider2D.offset = new Vector2(P2_boxCollider2D.offset.x, -0.005058818f);
+            P2_boxCollider2D.offset = new Vector2(P2_boxCollider2D.offset.x, -0.01282739f);
             P2_boxCollider2D.size = player2_Stand;
             animator.SetBool("Crouch", false);
         }
@@ -129,6 +148,7 @@ public class Player_2_movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("boop");
+                audioSource.PlayOneShot(buttonPress);
                 animatorButtonOne.SetBool("OpenDoor", true);
                 animatorGasWall.SetBool("StopGas", true);
             }
@@ -150,8 +170,8 @@ public class Player_2_movement : MonoBehaviour
     {
         playerHP2 -= 1;
         print("hp" + playerHP2);
+        animator.SetTrigger("GotHit");
 
-      
         if (playerHP2 <= 0)
         {
             animator.SetBool("Die", true);
