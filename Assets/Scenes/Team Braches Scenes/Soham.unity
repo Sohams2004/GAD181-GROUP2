@@ -434,6 +434,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!70 &21698594
 CapsuleCollider2D:
@@ -4630,6 +4634,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!70 &734831292
 CapsuleCollider2D:
@@ -5780,6 +5788,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!70 &950711146
 CapsuleCollider2D:
@@ -7606,6 +7618,7 @@ GameObject:
   - component: {fileID: 1212127625}
   - component: {fileID: 1212127624}
   - component: {fileID: 1212127626}
+  - component: {fileID: 1212127627}
   m_Layer: 3
   m_Name: Player 2 Combat
   m_TagString: Player2
@@ -7743,7 +7756,7 @@ Rigidbody2D:
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c2fae0e734d61b143873a31f76f9d692, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -7817,7 +7830,6 @@ MonoBehaviour:
   attackRange: 1
   damage: 5
   repulseForce: 0
-  attack: {fileID: 8657396607956593342}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -7838,6 +7850,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEnterTrigger: 0
   keyPad: {fileID: 0}
+--- !u!114 &1212127627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212127616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096ed872e94dc5447ad188a0ddb0a48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1212127616}
+  toggleColor: 1
+  spriteRenderer: {fileID: 1212127619}
 --- !u!1 &1221390823
 GameObject:
   m_ObjectHideFlags: 0
@@ -9392,6 +9419,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!70 &1499157746
 CapsuleCollider2D:
@@ -10256,6 +10287,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!70 &1622405760
 CapsuleCollider2D:
@@ -10925,6 +10960,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 2
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!1 &1741874544
 GameObject:
@@ -11203,6 +11242,10 @@ PrefabInstance:
       propertyPath: passcode
       value: 1394
       objectReference: {fileID: 0}
+    - target: {fileID: 9160629192022597852, guid: eac75be8ba6b26a4ab47b4e1ccb978b5, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1212127624}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac75be8ba6b26a4ab47b4e1ccb978b5, type: 3}
 --- !u!1 &1781016274
@@ -12027,7 +12070,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c66cff2c687bda541bfa72117556da64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12960,6 +13003,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!70 &2000222737
 CapsuleCollider2D:
@@ -14012,6 +14059,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!4 &1657213820606858904
 Transform:
@@ -14218,6 +14269,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 1967427887}
 --- !u!4 &1879919701236443735
 Transform:
@@ -14302,6 +14357,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!4 &3030765864775290200
 Transform:
@@ -15084,7 +15143,6 @@ MonoBehaviour:
   attackRange: 1
   damage: 5
   repulseForce: 0
-  attack: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -16570,6 +16628,10 @@ MonoBehaviour:
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
+  coroutineOn: 0
+  renderer: {fileID: 0}
+  player: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
 --- !u!4 &8696593159620242847 stripped
 Transform:
