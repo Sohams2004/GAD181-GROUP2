@@ -25,5 +25,5 @@ public class Player2 : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             StartCoroutine(ChangePlayerColor());
         }
-    }
+    } 
 }

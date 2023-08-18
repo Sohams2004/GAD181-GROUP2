@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,16 @@ public class Player_2_movement : MonoBehaviour
     [SerializeField] private Animator animatorButtonOne;
     [SerializeField] private Animator animatorGasWall;
 
+    public ParticleSystem healingEffect;
+
+    TriggerHealthTent triggerHealthTent;
+
+    void OnDestroy()
+    {
+        triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
+        triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
+    }
+
     void Start()
     {
         P2_boxCollider2D = GetComponent<BoxCollider2D>();
@@ -35,8 +46,27 @@ public class Player_2_movement : MonoBehaviour
        
         buttonOne = GameObject.Find("button 1 opens gate save player");
         healTent2 = GameObject.Find("HealingStation (1)");
-      
+
+        healingEffect.Stop();
+
+        triggerHealthTent = healTent2.GetComponent<TriggerHealthTent>();
+
+        triggerHealthTent.PlayerEnterTentEvent += OnPlayerEnterTent;
+        triggerHealthTent.PlayerExitTentEvent += OnPlayerExitTent;
+
     }
+
+    private void OnPlayerEnterTent()
+    {
+        healingEffect.Play();
+    }
+
+    private void OnPlayerExitTent()
+    {
+        healingEffect.Stop();
+    }
+
+
     private void FixedUpdate()
     {
         float inputx = Input.GetAxis("Horizontal");
@@ -133,13 +163,6 @@ public class Player_2_movement : MonoBehaviour
                 animatorGasWall.SetBool("StopGas", true);
             }
         }
-
-        if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
-        {
-            HealBruh(out playerHP2);
-            Debug.Log("healed2");
-        }
-        
     }
 
     void HealBruh(out int value)
@@ -157,10 +180,7 @@ public class Player_2_movement : MonoBehaviour
             animator.SetBool("Die", true);
         }
         return playerHP2;
-
-
     }
-
 }
 
 
