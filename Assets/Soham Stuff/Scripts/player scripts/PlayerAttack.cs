@@ -22,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
     //public Rigidbody2D enemyrb;
     public bool wallBro;
 
+    Enemies enemy;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -42,7 +44,8 @@ public class PlayerAttack : MonoBehaviour
                 //wallBro = true;
                 Debug.Log("Ad");
                 //wallBro = false;
-                
+
+                StartCoroutine(enemy.GetComponent<Enemies>().ChangeEnemyColor()); 
             }
         }
     }

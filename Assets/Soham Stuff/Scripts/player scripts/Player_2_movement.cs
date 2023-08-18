@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,16 @@ public class Player_2_movement : MonoBehaviour
     [SerializeField] private Animator animatorButtonOne;
     [SerializeField] private Animator animatorGasWall;
 
+    public ParticleSystem healingEffect;
+
+    TriggerHealthTent triggerHealthTent;
+
+    void OnDestroy()
+    {
+        triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
+        triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
+    }
+
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip buttonPress;
 
@@ -47,8 +58,26 @@ public class Player_2_movement : MonoBehaviour
         buttonOne = GameObject.Find("button 1 opens gate save player");
         healTent2 = GameObject.Find("HealingStation (1)");
 
-        //playerKeypadMovement = GameObject.Find("button");
+        healingEffect.Stop();
+
+        triggerHealthTent = healTent2.GetComponent<TriggerHealthTent>();
+
+        triggerHealthTent.PlayerEnterTentEvent += OnPlayerEnterTent;
+        triggerHealthTent.PlayerExitTentEvent += OnPlayerExitTent;
+
     }
+
+    private void OnPlayerEnterTent()
+    {
+        healingEffect.Play();
+    }
+
+    private void OnPlayerExitTent()
+    {
+        healingEffect.Stop();
+    }
+
+
     private void FixedUpdate()
     {
 
@@ -239,10 +268,7 @@ public class Player_2_movement : MonoBehaviour
             animator.SetBool("Die", true);
         }
         return playerHP2;
-
-
     }
-
 }
 
 
