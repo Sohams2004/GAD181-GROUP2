@@ -5,8 +5,14 @@ using UnityEngine;
 public class Player_2_movement : MonoBehaviour
 {
     public float movementSpeed = 10f;
+    //public AnimationCurve movementCurve;
+    float time = 0f; 
+
     public float jumpForce = 5;
+
     public bool isGrounded2;
+    public float rayLength = 1f;
+    public LayerMask floorMask;
 
     public Vector2 player2_Stand;
    
@@ -49,28 +55,65 @@ public class Player_2_movement : MonoBehaviour
         // if (playerKeypadMovement.GetComponent<interactiveKeypad>().playerMove == true)
         // {
         //    Debug.Log("iyea");
-        // }
+        // }/*/
         // else
         // {
         //Debug.Log("ahah");
         Movement();
-        Jump();
         // }
+        //raycast to replace isGrounded collidor, fixed jumping in quick succession issue
+        RaycastHit2D hitinfo = (Physics2D.Raycast(transform.position, -transform.up, rayLength, floorMask));
 
+        if (hitinfo)
+        {
+            if(hitinfo.collider.tag == "Floor")
+            {
+                Debug.Log("Floor found");
+
+          
+                    isGrounded2 = true;
+                    animator.SetBool("IsGrounded2", true);
+                    animator.SetBool("Jump", false);
+          
+            }
+
+        }
+        else
+        {
+            isGrounded2 = false;
+            animator.SetBool("IsGrounded2", false);
+
+        }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position, -transform.up * rayLength);
     }
 
     void Movement()
     {
         float inputx = Input.GetAxis("Horizontal");
+        //animator state info fixes the issue of player moving even after doing these animations in which we don't want them to move
+        //so if these states are true then stop moving on x axis
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")
            || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") || animator.GetCurrentAnimatorStateInfo(0).IsName("Death")
            || animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
         {
             player_2_rb.velocity = new Vector2(0, player_2_rb.velocity.y);
         }
-        else
+        else 
         {
+            /*/
+            //inputx
+            movementSpeed = movementCurve.Evaluate(time);
+            time += Time.deltaTime;
 
+            player_2_rb.AddForce(movementSpeed * Vector2.right);
+            
+
+            /*/
             player_2_rb.velocity = new Vector2(movementSpeed * inputx, player_2_rb.velocity.y);
 
             if (inputx > 0)
@@ -81,7 +124,7 @@ public class Player_2_movement : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().flipX = true;
             }
-
+            
         }
         //Mathf Absolute makes it so be it minus or plus it will give back the number as positive, makes things easier for blendtree float
         animator.SetFloat("xVelocity", Mathf.Abs(player_2_rb.velocity.x));
@@ -94,14 +137,15 @@ public class Player_2_movement : MonoBehaviour
 
         animator.SetFloat("yVelocity", player_2_rb.velocity.y);
         /*/
-         * aaa
+            *aaa
          * 
         /*/
     }
     void Jump()
     {
-        if (Input.GetKey(KeyCode.W) && isGrounded2)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded2)
         {
+            print("bruh0");
             player_2_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isGrounded2 = false;
 
@@ -110,8 +154,12 @@ public class Player_2_movement : MonoBehaviour
 
         }
     }
-    // easier isGrounded for now, allows for unlimited jump without flying
-    // if player touchs ground it is grounded
+
+    /*/
+   *  
+   * 
+    //easier isGrounded for now, allows for unlimited jump without flying
+    //if player touchs ground it is grounded
     void OnCollisionEnter2D(Collision2D collision2D)
     {
         if (collision2D.gameObject.tag == "Floor")
@@ -123,9 +171,22 @@ public class Player_2_movement : MonoBehaviour
         }
     }
 
+    void OnCollisionExit2D(Collision2D collision2D)
+    {
+        if (collision2D.gameObject.tag == "Floor")
+        {
+            Debug.Log("i am gonna cry");
+            isGrounded2 = false;
+            animator.SetBool("IsGrounded2", false);
+            animator.SetBool("Jump", false);
+        }
+    }
+     /*/
+
     //mohit here bringing my code over here from placeholder player 2 as it is part of player 2 script
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             //isCrouch = true;
@@ -159,7 +220,8 @@ public class Player_2_movement : MonoBehaviour
             HealBruh(out playerHP2);
             Debug.Log("healed2");
         }
-        
+        Jump();
+
     }
 
     void HealBruh(out int value)

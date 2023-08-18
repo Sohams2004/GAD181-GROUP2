@@ -18,7 +18,7 @@ public class TriggerWin : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag =="ball" && other.tag == "Player" || other.tag == "Player2")
+        if (other.tag =="ball" && other.tag == "Player" || other.tag == "Player2" /*/&& other.tag == "Player"/*/)
         {
             popUpGGWP.SetActive(true);
         }

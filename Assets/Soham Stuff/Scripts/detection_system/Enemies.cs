@@ -32,6 +32,8 @@ public class Enemies : MonoBehaviour
     }
     void Update()
     {
+      
+
         TargetPlayer();
         KillEnemy();
 
@@ -105,6 +107,7 @@ public class Enemies : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(transform.position, -transform.right * rayLength);
+
     }
 }
 

@@ -16,6 +16,10 @@ public class Keypad_functionality : MonoBehaviour
     public void numberToPrintOut(string number)
     {
         displayText.text += number;
+        if (displayText.text.Length >= 4)
+        {
+            displayText.text = displayText.text.Substring(0, 4);
+        }
     }
     // this function is for the green button
     // check if the code is correct

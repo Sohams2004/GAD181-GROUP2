@@ -6,13 +6,17 @@ public class enemymovement : MonoBehaviour
 {
     [SerializeField] float patrolSpeed = 1f;
     [SerializeField] Transform[] patrolPoints;  //assign the 2 patrol points here ie point A and point B.
-    [SerializeField] int patrolIndex;   
+    [SerializeField] public int patrolIndex;
+   // public bool iAmRotating;
 
     void Update()
     {
-        Patroling(patrolPoints[patrolIndex].position);
+        //Patroling(patrolPoints[patrolIndex].position);
         patrolToNextPoint();
-        patrolRotation();
+        //patrolRotation();
+        Debug.Log("patrolIndex" +  patrolIndex);
+        Debug.Log("patrolPoints.Length" + patrolPoints.Length);
+        
     }
         //function that moves the enemy to a certain point on the map
     void Patroling(Vector3 positionToGo)
@@ -22,15 +26,16 @@ public class enemymovement : MonoBehaviour
             new Vector3(positionToGo.x, transform.position.y, transform.position.z), Time.deltaTime * patrolSpeed);
     }
         //function that moves the enemy to the point after the enemy have reached the first point
-    void patrolToNextPoint() 
+    public void patrolToNextPoint() 
     {
        
         float distance = Vector3.Distance(transform.position, patrolPoints[patrolIndex].position);
-        
-            //check if enemy distance to the point is less or equal too 1 add a patrol point.
-        if(distance <= 1)
+        Debug.Log("distance" + distance);
+        //check if enemy distance to the point is less or equal too 1 add a patrol point.
+        if (distance <= 1)
         {
             patrolIndex++;
+
         }
         if (patrolIndex > patrolPoints.Length - 1)
         {
@@ -39,16 +44,16 @@ public class enemymovement : MonoBehaviour
         }
     }
         //function that rotates enemy 180 degrees when the enemy reaches the point
-    void patrolRotation()
+    public void patrolRotation()
     {
         if (patrolIndex == 0)
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             return;
         }
         if (patrolIndex == 1)
         {
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 270f, 0f);
             return;
         }
     }
