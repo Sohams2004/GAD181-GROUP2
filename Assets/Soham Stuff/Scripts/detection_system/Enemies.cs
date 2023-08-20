@@ -34,6 +34,9 @@ public class Enemies : MonoBehaviour
     // [SerializeField] private Animator animatorTurret;
     [SerializeField] GameObject shooting;
 
+    public Player_2_Health player_2_Health;
+    public Player_1_Health player_1_Health;
+
     private void Start()
     {
         player2 = GameObject.Find("Player 2 Combat");
@@ -45,6 +48,7 @@ public class Enemies : MonoBehaviour
         player_2 = FindObjectOfType<Player2>();
 
         coroutineOn = false;
+
     }
     void Update()
     {
@@ -80,7 +84,7 @@ public class Enemies : MonoBehaviour
                     Debug.Log("urt");
                     player1.GetComponent<Player_1_movement>().DamageMe2();
 
-
+                    player_1_Health.decreaseHealth = true;
                 }
             }
 
@@ -108,6 +112,8 @@ public class Enemies : MonoBehaviour
                     //shooting.SetActive(true);
                     turret.TurretShooting();
                 }
+
+                player_2_Health.decreaseHealth = true;
             }
 
             else
@@ -120,13 +126,14 @@ public class Enemies : MonoBehaviour
         else
         {
             Debug.LogWarningFormat("Stop color");
+            player_2_Health.decreaseHealth = false; 
+            player_1_Health.decreaseHealth = false;
             
             if (coroutineOn)
             {
                 player_2.toggleColor = false;
                 coroutineOn = false;
             }
-            
         }
     }
 

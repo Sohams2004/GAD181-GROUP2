@@ -12,7 +12,7 @@ public class Player_2_movement : MonoBehaviour
     public float jumpForce = 5;
 
     public bool isGrounded2;
-    public float rayLength = 1f;
+    public float rayLength = 2f;
     public LayerMask floorMask;
 
     public Vector2 player2_Stand;
@@ -36,6 +36,7 @@ public class Player_2_movement : MonoBehaviour
     public ParticleSystem healingEffect;
 
     TriggerHealthTent triggerHealthTent;
+
 
     void OnDestroy()
     {
@@ -92,7 +93,7 @@ public class Player_2_movement : MonoBehaviour
         // }
         //raycast to replace isGrounded collidor, fixed jumping in quick succession issue
         RaycastHit2D hitinfo = (Physics2D.Raycast(transform.position, -transform.up, rayLength, floorMask));
-
+        
         if (hitinfo)
         {
             if(hitinfo.collider.tag == "Floor")

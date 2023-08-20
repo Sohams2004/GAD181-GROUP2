@@ -12621,6 +12621,10 @@ MonoBehaviour:
   movementSpeed: 10
   jumpForce: 15
   isGrounded2: 0
+  rayLength: 1.85
+  floorMask:
+    serializedVersion: 2
+    m_Bits: 128
   player2_Stand: {x: 0, y: 0}
   player2_Crouch: {x: 0, y: 0}
   P2_boxCollider2D: {fileID: 1212127617}
@@ -12629,6 +12633,8 @@ MonoBehaviour:
   animatorButtonOne: {fileID: 376620881}
   animatorGasWall: {fileID: 1529516490}
   healingEffect: {fileID: 364551595}
+  audioSource: {fileID: 0}
+  buttonPress: {fileID: 0}
 --- !u!114 &1212127625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12647,8 +12653,6 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  repulseEnemy: {x: 0, y: 0}
-  enemyrb: {fileID: 1874076594}
   wallBro: 0
 --- !u!114 &1212127626
 MonoBehaviour:
@@ -18519,6 +18523,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8877663618962763288, guid: 3040bd1634c03b34380bd03b45e47319, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3040bd1634c03b34380bd03b45e47319, type: 3}
 --- !u!1 &747545475353156244
@@ -19941,8 +19949,6 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
-  repulseEnemy: {x: 0, y: 0}
-  enemyrb: {fileID: 1874076594}
   wallBro: 0
 --- !u!1001 &4975530195185118355
 PrefabInstance:

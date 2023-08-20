@@ -16,7 +16,7 @@ public class Player_1_movement : MonoBehaviour
     public BoxCollider2D P1_boxCollider2D;
     public Rigidbody2D player_1_rb;
 
-    public int playerHP = 4;
+    public int playerHP = 5;
 
     GameObject gasWall;
     //Damage overtime variable for gaswall
