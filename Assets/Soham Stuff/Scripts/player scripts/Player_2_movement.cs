@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_2_movement : MonoBehaviour
 {
+    [SerializeField] private AudioSource takingDamageSoundEffect;
+
     public float movementSpeed = 10f;
     public float jumpForce = 5;
     public bool isGrounded2;
@@ -142,17 +144,17 @@ public class Player_2_movement : MonoBehaviour
             animator.SetBool("Crouch", false);
         }
 
-        if (buttonOne.GetComponent<TriggerButton>().inButtonOne == true)
-        {
-            Debug.Log("beep");
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("boop");
-                audioSource.PlayOneShot(buttonPress);
-                animatorButtonOne.SetBool("OpenDoor", true);
-                animatorGasWall.SetBool("StopGas", true);
-            }
-        }
+          if (buttonOne.GetComponent<TriggerButton>().inButtonOne == true)
+          {
+              Debug.Log("beep");
+              if (Input.GetKeyDown(KeyCode.E))
+              {
+                  Debug.Log("boop");
+                  audioSource.PlayOneShot(buttonPress);
+                  animatorButtonOne.SetBool("OpenDoor", true);
+                  animatorGasWall.SetBool("StopGas", true);
+              }
+          }
 
         if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
         {
@@ -168,6 +170,7 @@ public class Player_2_movement : MonoBehaviour
     }
     public int DamageMe()
     {
+        takingDamageSoundEffect.Play();
         playerHP2 -= 1;
         print("hp" + playerHP2);
         animator.SetTrigger("GotHit");

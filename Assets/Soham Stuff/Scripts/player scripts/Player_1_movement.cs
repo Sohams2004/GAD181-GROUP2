@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player_1_movement : MonoBehaviour
 {
+    [SerializeField] private AudioSource hideSoundEffect;
+    [SerializeField] private AudioSource takingDamageSoundEffect;
+
     public float movementSpeed = 10f;
     public float jumpforce = 5;
     public bool isGrounded;
@@ -46,7 +49,7 @@ public class Player_1_movement : MonoBehaviour
         hideSpot = GameObject.Find("HideSpot");
         hideSpot1 = GameObject.Find("HideSpot1");
 
-
+       // playHideAudio= false;
     }
 
     private void FixedUpdate()
@@ -89,8 +92,10 @@ public class Player_1_movement : MonoBehaviour
         //This for polish next project
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
+
             isCrouch = true;
             //P1_boxCollider2D.size = player1_Crouch;
+           
         }
 
         if (Input.GetKeyUp(KeyCode.RightShift))
@@ -138,8 +143,9 @@ public class Player_1_movement : MonoBehaviour
             {
                 gameObject.layer = 2;
                 animatorEnemyWalkBy.SetBool("GoOn", true);
+                hideSoundEffect.Play();
             }
-
+           
         }
         else if (hideSpot1.GetComponent<TriggerCrouch>().inHide == true)
         {
@@ -181,6 +187,7 @@ public class Player_1_movement : MonoBehaviour
 
     public int DamageMe2()
     {
+        takingDamageSoundEffect.Play();
         playerHP -= 1;
         print("hp" + playerHP);
         return playerHP;
