@@ -5,8 +5,11 @@ using UnityEngine;
 public class Player_1_movement : MonoBehaviour
 {
     public float movementSpeed = 10f;
-    public float jumpforce = 5;
-    public bool isGrounded;
+    public float jumpForce = 5;
+    public bool isGrounded1;
+
+    public float rayLength = 1f;
+    public LayerMask floorMask;
 
     public Vector2 player1_Stand;
     public Vector2 player1_Crouch;
@@ -15,6 +18,8 @@ public class Player_1_movement : MonoBehaviour
 
     public BoxCollider2D P1_boxCollider2D;
     public Rigidbody2D player_1_rb;
+
+    [SerializeField] private Animator animator; 
 
     public int playerHP = 4;
 
@@ -27,8 +32,6 @@ public class Player_1_movement : MonoBehaviour
     GameObject healTent1;
     GameObject hideSpot;
     GameObject hideSpot1;
-
-    [SerializeField] GameObject popUpRetry;
 
     [SerializeField] private Animator animatorEnemyWalkBy;
     //[SerializeField] GameObject playerOne;
@@ -48,58 +51,57 @@ public class Player_1_movement : MonoBehaviour
 
 
     }
-
     private void FixedUpdate()
     {
-        float inputx = Input.GetAxis("Horizontal1");
 
-        player_1_rb.velocity = new Vector2(movementSpeed * inputx, player_1_rb.velocity.y);
+        Movement();
+        // }
+        //raycast to replace isGrounded collidor, fixed jumping in quick succession issue
+        RaycastHit2D hitinfo = (Physics2D.Raycast(transform.position, -transform.up, rayLength, floorMask));
 
-
-        if (Input.GetKey(KeyCode.UpArrow) && !isGrounded)
+        if (hitinfo)
         {
-            player_1_rb.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
-            isGrounded = true;
+            if (hitinfo.collider.tag == "Floor")
+            {
+                Debug.Log("Floor found");
 
-            //rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+
+                isGrounded1 = true;
+                animator.SetBool("IsGrounded1", true);
+                animator.SetBool("Jump", false);
+
+            }
+
         }
-
-        if (inputx > 0)
+        else
         {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        if (inputx < 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-    }
+            isGrounded1 = false;
+            animator.SetBool("IsGrounded1", false);
 
-
-    void OnCollisionEnter2D(Collision2D collision2D)
-    {
-        if (collision2D.gameObject.tag == "Floor")
-        {
-            Debug.Log("i am gonna cry");
-            isGrounded = false;
         }
     }
-
-    public void Update()
+    private void Update()
     {
         //This for polish next project
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
             isCrouch = true;
+
+            //P1_boxCollider2D.offset = new Vector2(P1_boxCollider2D.offset.x, -0.09f);
             //P1_boxCollider2D.size = player1_Crouch;
+            animator.SetBool("Crouch", true);
         }
 
         if (Input.GetKeyUp(KeyCode.RightShift))
         {
             isCrouch = false;
+            //P1_boxCollider2D.offset = new Vector2(P1_boxCollider2D.offset.x, -0.01282739f);
             //P1_boxCollider2D.size = player1_Stand;
+            animator.SetBool("Crouch", false);
+
         }
 
-        //mohit here bringing my code over here from placeholder player 2 as it is part of player 1 script
+
         // if gasWall's bool inGas true then damage player 1 damage per second and print for now, visual and sound later
         if (gasWall.GetComponent<TriggerGasWall>().inGas == true)
         {
@@ -115,25 +117,10 @@ public class Player_1_movement : MonoBehaviour
             }
             //gameObject.layer = 2;
         }
-        // put layer thing in gas to check what i was doing wrong, 
-        // layer changing works in gas wall trigger but not in the dedcated one i was trying to make so i'll leave holding crouch or shift for next project
-        /*if (gasWall.GetComponent<TriggerGasWall>().inGas == false)
-        {
-            Debug.Log("i cri");
-            gameObject.layer = 3;
-        }*/
-        // put layer thing in gas to check what i was doing wrong, 
-        // layer changing works in gas wall trigger but not in the dedcated one i was trying to make so i'll leave holding crouch or shift for next project
 
-
-        // so in the end making it && was better && means when both are false
-        //layer was changing to player even when was was true cause of || 
-        //also before it wasn't reading the line due to not assigning hideSpot2
-
-        //this function just does not want to work
         if (hideSpot.GetComponent<TriggerCrouch>().inHide == true)
         {
-            
+
             if (isCrouch)
             {
                 gameObject.layer = 2;
@@ -143,7 +130,7 @@ public class Player_1_movement : MonoBehaviour
         }
         else if (hideSpot1.GetComponent<TriggerCrouch>().inHide == true)
         {
-            
+
             if (isCrouch)
             {
                 gameObject.layer = 2;
@@ -156,14 +143,6 @@ public class Player_1_movement : MonoBehaviour
             gameObject.layer = 3;
         }
 
-        /*/
-        else if (hideSpot2.GetComponent<TriggerCrouch>().inHide == false)
-         {
-             Debug.Log("i cri2");
-             gameObject.layer = 3;
-         }
-        */
-
 
 
         if (healTent1.GetComponent<TriggerHealthTent>().inHealTent2 == true)
@@ -171,7 +150,64 @@ public class Player_1_movement : MonoBehaviour
             HealBruh2(out playerHP);
             Debug.Log("healed2");
         }
+        Jump();
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position, -transform.up * rayLength);
+    }
+
+
+    void Movement()
+    {
+        float inputx = Input.GetAxis("Horizontal1");
+        //animator state info fixes the issue of player moving even after doing these animations in which we don't want them to move
+        //so if these states are true then stop moving on x axis
+        //if (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        // {
+        //    player_1_rb.velocity = new Vector2(0, player_1_rb.velocity.y);
+        //}
+        //else
+        //{
+       
+        player_1_rb.velocity = new Vector2(movementSpeed * inputx, player_1_rb.velocity.y);      
+
+        if (inputx > 0)
+        {
+            //GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (inputx < 0)
+        {
+            //GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+        //transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        //transform.rotation = Quaternion.Euler(0f, 270f, 0f);
+
+        //}
+        //Mathf Absolute makes it so be it minus or plus it will give back the number as positive, makes things easier for blendtree float
+        animator.SetFloat("xVelocity", /*Mathf.Abs(*/player_1_rb.velocity.x);
+
+         animator.SetFloat("yVelocity", player_1_rb.velocity.y);
+        /*/
+            *aaa
+         * 
+        /*/
+    }
+
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded1)
+        {
+            print("bruh0");
+            player_1_rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            isGrounded1 = false;
+
+            animator.SetBool("IsGrounded1", false);
+            animator.SetBool("Jump", true);
+
+        }
     }
 
     void HealBruh2(out int value)

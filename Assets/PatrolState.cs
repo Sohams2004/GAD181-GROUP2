@@ -21,7 +21,7 @@ public class PatrolState : StateMachineBehaviour
     {
         
         timer += Time.deltaTime;
-        Debug.Log("aaf");
+        //Debug.Log("aaf");
 
         //(enemyPatrolPoints.GetComponent<enemymovement>().patrolIndex == 0 || 
         //enemyPatrolPoints.GetComponent<enemymovement>().patrolIndex == 1)

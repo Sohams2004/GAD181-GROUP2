@@ -17,13 +17,13 @@ public class RotationState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+            animator.SetBool("isPatrolling", true);
 
         timer += Time.deltaTime;
-        if (timer > 1.37f)
+        if (timer > 4f)
         {
             enemyRotate.GetComponent<enemymovement>().patrolRotation();
             Debug.Log("I work on exit?");
-            animator.SetBool("isPatrolling", true);
         }
     }
 

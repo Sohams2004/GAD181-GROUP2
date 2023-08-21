@@ -14,8 +14,8 @@ public class enemymovement : MonoBehaviour
         //Patroling(patrolPoints[patrolIndex].position);
         patrolToNextPoint();
         //patrolRotation();
-        Debug.Log("patrolIndex" +  patrolIndex);
-        Debug.Log("patrolPoints.Length" + patrolPoints.Length);
+        //Debug.Log("patrolIndex" +  patrolIndex);
+        //Debug.Log("patrolPoints.Length" + patrolPoints.Length);
         
     }
         //function that moves the enemy to a certain point on the map
@@ -30,7 +30,7 @@ public class enemymovement : MonoBehaviour
     {
        
         float distance = Vector3.Distance(transform.position, patrolPoints[patrolIndex].position);
-        Debug.Log("distance" + distance);
+        //Debug.Log("distance" + distance);
         //check if enemy distance to the point is less or equal too 1 add a patrol point.
         if (distance <= 1)
         {
