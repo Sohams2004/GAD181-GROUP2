@@ -64,7 +64,7 @@ public class Enemies : MonoBehaviour
     {
 
 
-        RaycastHit2D hitInfo = (Physics2D.Raycast(transform.position, -transform.right, rayLength,
+        RaycastHit2D hitInfo = (Physics2D.Raycast(transform.position, transform.forward, rayLength,
              PlayerMask));
         if (hitInfo)
         {
@@ -92,7 +92,7 @@ public class Enemies : MonoBehaviour
             {
 
                 Debug.Log("player2 is found");
-                
+                player_2_Health.decreaseHealth = true;
 
                 if (!coroutineOn)
                 {
@@ -166,7 +166,7 @@ public class Enemies : MonoBehaviour
     //visual line that mimics the raycast.
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position, -transform.right * rayLength);
+        Gizmos.DrawRay(new Vector3 (transform.position.x, transform.position.y+2.5f, transform.position.z), transform.forward * rayLength);
 
     }
 }

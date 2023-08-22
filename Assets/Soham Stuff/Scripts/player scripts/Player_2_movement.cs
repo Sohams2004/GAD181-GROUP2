@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player_2_movement : MonoBehaviour
 {
+    [SerializeField] private AudioSource takingDamageSoundEffect;
+
     public float movementSpeed = 10f;
     //public AnimationCurve movementCurve;
     float time = 0f; 
@@ -40,8 +42,8 @@ public class Player_2_movement : MonoBehaviour
 
     void OnDestroy()
     {
-        triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
-        triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
+       // triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
+       // triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
     }
 
     [SerializeField] AudioSource audioSource;
@@ -217,7 +219,7 @@ public class Player_2_movement : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             //isCrouch = true;
             P2_boxCollider2D.offset= new Vector2(P2_boxCollider2D.offset.x,-0.09f);
@@ -225,7 +227,7 @@ public class Player_2_movement : MonoBehaviour
             animator.SetBool("Crouch", true);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.S))
         {
             //isCrouch = false;
             P2_boxCollider2D.offset = new Vector2(P2_boxCollider2D.offset.x, -0.01282739f);
@@ -233,17 +235,17 @@ public class Player_2_movement : MonoBehaviour
             animator.SetBool("Crouch", false);
         }
 
-        if (buttonOne.GetComponent<TriggerButton>().inButtonOne == true)
-        {
-            Debug.Log("beep");
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("boop");
-                audioSource.PlayOneShot(buttonPress);
-                animatorButtonOne.SetBool("OpenDoor", true);
-                animatorGasWall.SetBool("StopGas", true);
-            }
-        }
+          if (buttonOne.GetComponent<TriggerButton>().inButtonOne == true)
+          {
+              Debug.Log("beep");
+              if (Input.GetKeyDown(KeyCode.E))
+              {
+                  Debug.Log("boop");
+                  audioSource.PlayOneShot(buttonPress);
+                  animatorButtonOne.SetBool("OpenDoor", true);
+                  animatorGasWall.SetBool("StopGas", true);
+              }
+          }
 
         if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
         {
@@ -260,6 +262,7 @@ public class Player_2_movement : MonoBehaviour
     }
     public int DamageMe()
     {
+        takingDamageSoundEffect.Play();
         playerHP2 -= 1;
         print("hp" + playerHP2);
         animator.SetTrigger("GotHit");

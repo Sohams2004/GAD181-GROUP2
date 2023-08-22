@@ -14,8 +14,8 @@ public class enemymovement : MonoBehaviour
         //Patroling(patrolPoints[patrolIndex].position);
         patrolToNextPoint();
         //patrolRotation();
-        Debug.Log("patrolIndex" +  patrolIndex);
-        Debug.Log("patrolPoints.Length" + patrolPoints.Length);
+        //Debug.Log("patrolIndex" +  patrolIndex);
+        //Debug.Log("patrolPoints.Length" + patrolPoints.Length);
         
     }
         //function that moves the enemy to a certain point on the map
