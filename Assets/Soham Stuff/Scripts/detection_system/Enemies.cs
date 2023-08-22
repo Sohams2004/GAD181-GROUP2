@@ -118,12 +118,11 @@ public class Enemies : MonoBehaviour
             }
         }
 
-        else 
-            player_2_Health.decreaseHealth = false;
         else
         {
             Debug.LogWarningFormat("Stop color");
-            
+            player_2_Health.decreaseHealth = false;
+
             if (coroutineOn)
             {
                 player_2.toggleColor = false;

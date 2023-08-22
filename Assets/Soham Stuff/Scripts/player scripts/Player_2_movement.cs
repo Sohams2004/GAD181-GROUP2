@@ -41,8 +41,8 @@ public class Player_2_movement : MonoBehaviour
 
     void OnDestroy()
     {
-        triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
-        triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
+       // triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
+       // triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
     }
 
     [SerializeField] AudioSource audioSource;
@@ -218,7 +218,7 @@ public class Player_2_movement : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             //isCrouch = true;
             P2_boxCollider2D.offset= new Vector2(P2_boxCollider2D.offset.x,-0.09f);
@@ -226,7 +226,7 @@ public class Player_2_movement : MonoBehaviour
             animator.SetBool("Crouch", true);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.S))
         {
             //isCrouch = false;
             P2_boxCollider2D.offset = new Vector2(P2_boxCollider2D.offset.x, -0.01282739f);
