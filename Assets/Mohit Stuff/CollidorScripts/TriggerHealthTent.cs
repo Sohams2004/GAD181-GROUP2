@@ -8,8 +8,8 @@ public class TriggerHealthTent : MonoBehaviour
     public bool inHealTent2;
 
     public delegate void PlayerTentCollisiont();
-    public PlayerTentCollisiont PlayerEnterTentEvent;
-    public PlayerTentCollisiont PlayerExitTentEvent;
+    public static event PlayerTentCollisiont PlayerEnterTentEvent;
+    public static event PlayerTentCollisiont PlayerExitTentEvent;
 
     private void Start()
     {
@@ -23,31 +23,31 @@ public class TriggerHealthTent : MonoBehaviour
             Debug.Log("heal?");
             inHealTent = true;
 
-
         }
         else if (other.tag == "Player2")
         {
-            PlayerEnterTentEvent();
 
+            PlayerEnterTentEvent();
             Debug.Log("heal2?");
-            inHealTent2 = true;
+            //inHealTent2 = true;
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            PlayerExitTentEvent();
+
+            PlayerExitTentEvent(); ;
+
             Debug.Log("stopheal?");
             inHealTent = false;
-
 
         }
         else if (other.tag == "Player2")
         {
-            PlayerExitTentEvent();
+            PlayerExitTentEvent(); ;
             Debug.Log("stopheal2?");
-            inHealTent2 = false;
+            //inHealTent2 = false;
         }
     }
 

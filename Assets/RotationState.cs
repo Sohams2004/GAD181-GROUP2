@@ -5,13 +5,13 @@ using UnityEngine;
 public class RotationState : StateMachineBehaviour
 {
     float timer;
-    public GameObject enemyRotate;
-
+    
+    public enemymovement enemyRotate;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
-        enemyRotate = GameObject.Find("Enemy (2)");
+        enemyRotate = animator.GetComponent<enemymovement>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,7 +22,7 @@ public class RotationState : StateMachineBehaviour
         timer += Time.deltaTime;
         if (timer > 4f)
         {
-            enemyRotate.GetComponent<enemymovement>().patrolRotation();
+            //enemyRotate.patrolRotation();
             Debug.Log("I work on exit?");
         }
     }

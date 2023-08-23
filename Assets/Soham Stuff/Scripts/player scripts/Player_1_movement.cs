@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Player_1_movement : MonoBehaviour
 {
-    [SerializeField] private AudioSource hideSoundEffect;
-    [SerializeField] private AudioSource takingDamageSoundEffect;
+    [SerializeField] AudioSource audioSource;
 
+    [SerializeField] AudioClip hideSoundEffect;
+    [SerializeField] AudioClip takingDamageSoundEffect;
+    
     public float movementSpeed = 10f;
     public float jumpForce = 5;
     public bool isGrounded1;
@@ -38,6 +40,8 @@ public class Player_1_movement : MonoBehaviour
 
     [SerializeField] private Animator animatorEnemyWalkBy;
     //[SerializeField] GameObject playerOne;
+
+
     void Start()
     {
         P1_boxCollider2D = GetComponent<BoxCollider2D>();
@@ -130,7 +134,7 @@ public class Player_1_movement : MonoBehaviour
             {
                 gameObject.layer = 2;
                 animatorEnemyWalkBy.SetBool("GoOn", true);
-                hideSoundEffect.Play();
+                //hideSoundEffect.Play();
             }
            
         }
@@ -223,7 +227,7 @@ public class Player_1_movement : MonoBehaviour
 
     public int DamageMe2()
     {
-        takingDamageSoundEffect.Play();
+       // takingDamageSoundEffect.Play();
         playerHP -= 1;
         print("hp" + playerHP);
         return playerHP;

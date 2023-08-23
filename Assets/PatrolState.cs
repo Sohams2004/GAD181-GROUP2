@@ -13,7 +13,7 @@ public class PatrolState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
-        enemyPatrolPoints = animator.GetComponent<enemymovement>() ;
+        enemyPatrolPoints = animator.GetComponent<enemymovement>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,12 +22,12 @@ public class PatrolState : StateMachineBehaviour
         
         timer += Time.deltaTime;
         //Debug.Log("aaf");
-        //enemyPatrolPoints.  
+        //enemyPatrolPoints.patrolIndex == 0 || enemyPatrolPoints.patrolIndex == 1
 
         //(enemyPatrolPoints.GetComponent<enemymovement>().patrolIndex == 0 || 
         //enemyPatrolPoints.GetComponent<enemymovement>().patrolIndex == 1)
 
-        if (timer > 3.06f)
+        if (timer > 3.06f)//enemyPatrolPoints.patrolIndex == 0 || enemyPatrolPoints.patrolIndex == 1)
         {
             Debug.Log("bruh");
             animator.SetBool("isPatrolling", false);

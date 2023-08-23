@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class Player_2_movement : MonoBehaviour
 {
-    [SerializeField] private AudioSource takingDamageSoundEffect;
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip buttonPress;
+    [SerializeField] AudioClip takingDamageSoundEffect;
+    
 
     public float movementSpeed = 10f;
     //public AnimationCurve movementCurve;
@@ -30,48 +34,49 @@ public class Player_2_movement : MonoBehaviour
     //gaswall the button and their animators 
     
     GameObject buttonOne;
-    GameObject healTent2;
+    //GameObject healTent2;
     Animator animator;
     [SerializeField] private Animator animatorButtonOne;
     [SerializeField] private Animator animatorGasWall;
 
     public ParticleSystem healingEffect;
 
-    TriggerHealthTent triggerHealthTent;
-
+    private void Awake()
+    {
+        
+        TriggerHealthTent.PlayerEnterTentEvent += OnPlayerEnterTent;
+        TriggerHealthTent.PlayerExitTentEvent += OnPlayerExitTent;
+    }
     void OnDestroy()
     {
-       // triggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
-       // triggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
+        TriggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
+        TriggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
     }
 
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip buttonPress;
-
-
-    //GameObject playerKeypadMovement;
+   
     void Start()
     {
+       
+
         P2_boxCollider2D = GetComponent<BoxCollider2D>();
         player_2_rb = GetComponent<Rigidbody2D>();
         animator= GetComponent<Animator>();
         //gets components from gasWall and button 1 scripts
        
         buttonOne = GameObject.Find("button 1 opens gate save player");
-        healTent2 = GameObject.Find("HealingStation (1)");
+        //healTent2 = GameObject.Find("HealingStation (1)");
 
         healingEffect.Stop();
 
-        triggerHealthTent = healTent2.GetComponent<TriggerHealthTent>();
-
-        triggerHealthTent.PlayerEnterTentEvent += OnPlayerEnterTent;
-        triggerHealthTent.PlayerExitTentEvent += OnPlayerExitTent;
-
+        //triggerHealthTent = FindAnyObjectByType<TriggerHealthTent>();
     }
 
     private void OnPlayerEnterTent()
     {
         healingEffect.Play();
+        HealBruh(out playerHP2);
+        Debug.Log("healed2");
+
     }
 
     private void OnPlayerExitTent()
@@ -245,12 +250,11 @@ public class Player_2_movement : MonoBehaviour
                   animatorGasWall.SetBool("StopGas", true);
               }
           }
-
-        if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
-        {
-            HealBruh(out playerHP2);
-            Debug.Log("healed2");
-        }
+        /* if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
+         {
+             //HealBruh(out playerHP2);
+             //Debug.Log("healed2");
+         }*/
         Jump();
 
     }
@@ -261,7 +265,7 @@ public class Player_2_movement : MonoBehaviour
     }
     public int DamageMe()
     {
-        takingDamageSoundEffect.Play();
+        audioSource.PlayOneShot(takingDamageSoundEffect);
         playerHP2 -= 1;
         print("hp" + playerHP2);
         animator.SetTrigger("GotHit");
