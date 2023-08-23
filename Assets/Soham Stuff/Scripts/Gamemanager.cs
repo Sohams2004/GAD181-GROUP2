@@ -154,6 +154,8 @@ public class Gamemanager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    
     /*/
     public void GameOver()
     {

@@ -9,6 +9,9 @@ public class SceneChange : MonoBehaviour
     public bool Solo;
     public bool Coop;
     public Gamemanager gamemanager;
+
+    public GameObject controlPanel;
+
     //[SerializeField] GameObject popUpGameOver;
 
     public void PlayCoop()
@@ -28,6 +31,17 @@ public class SceneChange : MonoBehaviour
 
     public void QuitGame()
     {
+        Debug.Log("Game quit");
         Application.Quit();
+    }
+
+    public void ControlPanel()
+    {
+        controlPanel.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        controlPanel.SetActive(false);
     }
 }
