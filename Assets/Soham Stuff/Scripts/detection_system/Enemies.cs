@@ -6,6 +6,8 @@ using UnityEngine.Experimental.U2D.Animation;
 
 public class Enemies : MonoBehaviour
 {
+    // since i am working on the main pc at home for the first time now with git fork and unity, 
+    // before i do any drastic changes, i am goign to push and check if everything is ok
     public float rayLength = 1f; //adjust ray length here
     public LayerMask PlayerMask; // assign "Player" layermask in here
 
@@ -120,7 +122,7 @@ public class Enemies : MonoBehaviour
 
         else
         {
-            Debug.LogWarningFormat("Stop color");
+            //Debug.LogWarningFormat("Stop color");
             player_2_Health.decreaseHealth = false;
 
             if (coroutineOn)
