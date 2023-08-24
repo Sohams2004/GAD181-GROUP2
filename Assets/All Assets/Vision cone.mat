@@ -102,7 +102,7 @@ Material:
     - RECEIVE_SHADOWS: 1
     - USE_OBJECT_POSITION: 1
     - _AlphaClip: 0
-    - _AlphaClipThreshold: 0.5
+    - _AlphaClipThreshold: 0.1
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -123,7 +123,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PixelSize: 3
+    - _PixelSize: 2
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -135,11 +135,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 0.90588236}
+    - _AmbientLight: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.9433962, g: 0.9165834, b: 0.29814878, a: 0.5254902}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EdgeHighlightColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _EmissionColor: {r: 0.1425, g: 0.18772413, b: 0.25, a: 1}
+    - _EmissionColor: {r: 1, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0.5}
     - _PixelGridOrigin: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

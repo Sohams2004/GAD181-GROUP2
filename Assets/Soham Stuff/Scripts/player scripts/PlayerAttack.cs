@@ -54,7 +54,7 @@ public class PlayerAttack : MonoBehaviour
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
+        {   //if crouching then crouch attack
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crouch & Crouch walk") || 
                 animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack")) 
             {
@@ -62,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
                 Attack();
                 
             }
-
+            //if not then normal attack
             else
             {
 

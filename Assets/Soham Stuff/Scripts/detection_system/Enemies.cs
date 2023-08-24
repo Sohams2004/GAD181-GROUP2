@@ -16,7 +16,7 @@ public class Enemies : MonoBehaviour
     public GameObject player2;
     public GameObject player1;
 
-    Turret turret;
+    //Turret turret;
 
     public float enemyHealth = 2f;
 
@@ -27,43 +27,87 @@ public class Enemies : MonoBehaviour
 
     public Renderer renderer;
 
-    Player2 player_2;
+    Player2 player2Visual;
 
     public GameObject player;
 
-    public SpriteRenderer spriteRenderer;
+    //public SpriteRenderer spriteRenderer;
 
     // [SerializeField] private Animator animatorTurret;
     [SerializeField] GameObject shooting;
 
     public Player_2_Health player_2_Health;
+
+    [SerializeField] float suspiciousDistance;
+    [SerializeField] float chaseDistance;
+    [SerializeField] float shootDistance;
+
+    Animator animator;
+ 
     private void Start()
     {
         player2 = GameObject.Find("Player 2 Combat");
         player1 = GameObject.Find("Player 1 Stealth");
-        turret = FindAnyObjectByType<Turret>();
+        //turret = FindAnyObjectByType<Turret>();
 
         renderer = enemy.GetComponent<Renderer>();
 
-        player_2 = FindObjectOfType<Player2>();
-
+        player2Visual = player2.GetComponent<Player2>();
+        //.GetComponent<enemymovement>();
         coroutineOn = false;
+        animator = GetComponent<Animator>();
+
     }
     void Update()
     {
-      
+
+        //animator.Play("Check Shoe");
 
         TargetPlayer();
         KillEnemy();
 
         damagePlayer += Time.deltaTime;
+
+        float distance1 = Vector2.Distance(transform.position, player1.transform.position);
+        float distance2 = Vector2.Distance(transform.position, player2.transform.position);
+       // Vector2 direction = player2.transform.position - transform.position;
+
+
+        if (distance1 < suspiciousDistance || distance2 < suspiciousDistance)
+        {
+            //animator.SetBool("Bro", true);
+            //transform.LookAt(new Vector3(player2.transform.position.x, transform.position.y, player2.transform.position.z));
+            //transform.right = direction;
+            
+
+
+        }/*/
+        *
+        else if (distance1 < chaseDistance || distance2 < chaseDistance)
+        {
+         
+        }
+        else if (distance1 < shootDistance || distance2 < shootDistance)
+        {
+
+        }
+        else
+        {
+         false 
+        }
+          if (animator.GetCurrentAnimatorStateInfo(0).IsName("Rifle Turn (1)"))
+        {
+            transform.rotation = Quaternion.Euler(0f, 270f, 0f);
+        }
+        
+        /*/
     }
     //function that creates a ray, if the gameobject with tag player is in the ray the player gameobject will be destryed  
     public void TargetPlayer()
     {
 
 
-        RaycastHit2D hitInfo = (Physics2D.Raycast(transform.position, transform.forward, rayLength,
+        RaycastHit2D hitInfo = (Physics2D.Raycast(transform.position, transform.right, rayLength,
              PlayerMask));
         if (hitInfo)
         {
@@ -78,7 +122,7 @@ public class Enemies : MonoBehaviour
                     damagePlayer = 0;
                     //animatorTurret.SetBool("Deploy", true);
                     //shooting.SetActive(true);
-                    turret.TurretShooting();
+                    //turret.TurretShooting();
 
                     Debug.Log("urt");
                     player1.GetComponent<Player_1_movement>().DamageMe2();
@@ -96,8 +140,8 @@ public class Enemies : MonoBehaviour
                 if (!coroutineOn)
                 {
                     coroutineOn = true;
-                    player_2.toggleColor = true;
-                    StartCoroutine(player_2.ChangePlayerColor());
+                    player2Visual.toggleColor = true;
+                    StartCoroutine(player2Visual.ChangePlayerColor());
                 }
 
               
@@ -109,14 +153,14 @@ public class Enemies : MonoBehaviour
                     player2.GetComponent<Player_2_movement>().DamageMe();
                     //animatorTurret.SetBool("Deploy", true);
                     //shooting.SetActive(true);
-                    turret.TurretShooting();
+                    //turret.TurretShooting();
                 }
             }
 
             else
             {
                 //animatorTurret.SetBool("Deploy",false);
-                turret.TurretNotShooting();
+                //turret.TurretNotShooting();
             }
         }
 
@@ -127,7 +171,7 @@ public class Enemies : MonoBehaviour
 
             if (coroutineOn)
             {
-                player_2.toggleColor = false;
+                player2Visual.toggleColor = false;
                 coroutineOn = false;
             }
             
@@ -163,7 +207,17 @@ public class Enemies : MonoBehaviour
     //visual line that mimics the raycast.
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(new Vector3 (transform.position.x, transform.position.y+2.5f, transform.position.z), transform.forward * rayLength);
+        //Gizmos.DrawRay(transform.position, transform.forward, rayLength, PlayerMask);
+        Gizmos.DrawRay(transform.position, transform.right * rayLength);
+        //Gizmos.DrawRay(new Vector3 (transform.position.x, transform.position.y+2.5f, transform.position.z), transform.forward * rayLength);
+        Gizmos.color = new Color(1, 1, 0, 0.25f);
+        Gizmos.DrawSphere(transform.position, suspiciousDistance);
+
+        Gizmos.color = new Color(0, 1, 0, 0.25f);
+        Gizmos.DrawSphere(transform.position, chaseDistance);
+
+        Gizmos.color = new Color(0, 0, 1, 0.25f);
+        Gizmos.DrawSphere(transform.position, shootDistance);
 
     }
 }
