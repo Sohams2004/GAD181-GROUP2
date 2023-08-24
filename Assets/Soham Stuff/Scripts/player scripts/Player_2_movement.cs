@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_2_movement : MonoBehaviour
 {
     [SerializeField] private AudioSource takingDamageSoundEffect;
+    
 
     public float movementSpeed = 10f;
     public float jumpForce = 5;
@@ -158,6 +159,7 @@ public class Player_2_movement : MonoBehaviour
 
         if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
         {
+            
             HealBruh(out playerHP2);
             Debug.Log("healed2");
         }

@@ -22,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
     //public Rigidbody2D enemyrb;
     public bool wallBro;
 
+    [SerializeField] private AudioSource attackSoundEffect;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -52,11 +54,14 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
+            attackSoundEffect.Play();
+
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crouch & Crouch walk") || 
                 animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack")) 
             {
                 
                 Attack();
+                
                 
             }
 
