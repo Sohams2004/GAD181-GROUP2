@@ -7946,6 +7946,7 @@ GameObject:
   - component: {fileID: 1125538215}
   - component: {fileID: 1125538217}
   - component: {fileID: 1125538216}
+  - component: {fileID: 1125538218}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8018,6 +8019,39 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1125538218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125538214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1138198930
 GameObject:
   m_ObjectHideFlags: 0
@@ -8939,6 +8973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309c43fcea752944b8f8d73f04e08c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  takingDamageSoundEffect: {fileID: 0}
   movementSpeed: 10
   jumpForce: 15
   isGrounded2: 0
@@ -9256,6 +9291,7 @@ MonoBehaviour:
   Solo: 0
   Coop: 0
   gamemanager: {fileID: 1638122084}
+  controlPanel: {fileID: 0}
 --- !u!1 &1237895539
 GameObject:
   m_ObjectHideFlags: 0
@@ -21322,15 +21358,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283ac98402dd4f94e80f0299c2d70e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideSoundEffect: {fileID: 0}
+  takingDamageSoundEffect: {fileID: 0}
   movementSpeed: 10
-  jumpforce: 15
-  isGrounded: 0
+  jumpForce: 5
+  isGrounded1: 0
+  rayLength: 1
+  floorMask:
+    serializedVersion: 2
+    m_Bits: 0
   player1_Stand: {x: 0, y: 0}
   player1_Crouch: {x: 0, y: 0}
   P1_boxCollider2D: {fileID: 713803963}
   player_1_rb: {fileID: 713803962}
+  animator: {fileID: 0}
   playerHP: 5
-  popUpRetry: {fileID: 0}
   animatorEnemyWalkBy: {fileID: 1302748729}
 --- !u!114 &4895556250645274785
 MonoBehaviour:
