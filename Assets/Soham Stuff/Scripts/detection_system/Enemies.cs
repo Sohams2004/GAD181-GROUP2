@@ -18,14 +18,18 @@ public class Enemies : MonoBehaviour
 
     //Turret turret;
 
-    public float enemyHealth = 2f;
+    public int enemyHealth = 4;
 
     public bool DamagePlayer, coroutineOn;
 
     float damagePlayer = 0f;
     float damagePlayerTimeInterval = 1f;
 
-    public Renderer renderer;
+    //public Renderer renderer;
+    //[SerializeField] public GameObject body1;
+    //[SerializeField] public GameObject body2;
+    [SerializeField] public Renderer rendererBody1;
+    [SerializeField] public Renderer rendererBody2;
 
     Player2 player2Visual;
 
@@ -42,20 +46,22 @@ public class Enemies : MonoBehaviour
     [SerializeField] float chaseDistance;
     [SerializeField] float shootDistance;
 
-    Animator animator;
- 
+    public Animator animator;
+    public PlayerAttack playerAttack;
     private void Start()
     {
         player2 = GameObject.Find("Player 2 Combat");
         player1 = GameObject.Find("Player 1 Stealth");
         //turret = FindAnyObjectByType<Turret>();
 
-        renderer = enemy.GetComponent<Renderer>();
+        //rendererBody1 = body1.GetComponent<Renderer>();
+        //rendererBody2 = body2.GetComponent<Renderer>();
 
         player2Visual = player2.GetComponent<Player2>();
         //.GetComponent<enemymovement>();
         coroutineOn = false;
         animator = GetComponent<Animator>();
+        playerAttack = player2.GetComponent<PlayerAttack>();
 
     }
     void Update()
@@ -64,21 +70,23 @@ public class Enemies : MonoBehaviour
         //animator.Play("Check Shoe");
 
         TargetPlayer();
-        KillEnemy();
+        //DamageMe();
 
         damagePlayer += Time.deltaTime;
 
         float distance1 = Vector2.Distance(transform.position, player1.transform.position);
         float distance2 = Vector2.Distance(transform.position, player2.transform.position);
-       // Vector2 direction = player2.transform.position - transform.position;
+        // Vector2 direction = player2.transform.position - transform.position;
 
 
         if (distance1 < suspiciousDistance || distance2 < suspiciousDistance)
         {
+            animator.SetBool("canSeePlayer", true);
+
             //animator.SetBool("Bro", true);
             //transform.LookAt(new Vector3(player2.transform.position.x, transform.position.y, player2.transform.position.z));
             //transform.right = direction;
-            
+
 
 
         }/*/
@@ -94,10 +102,6 @@ public class Enemies : MonoBehaviour
         else
         {
          false 
-        }
-          if (animator.GetCurrentAnimatorStateInfo(0).IsName("Rifle Turn (1)"))
-        {
-            transform.rotation = Quaternion.Euler(0f, 270f, 0f);
         }
         
         /*/
@@ -144,7 +148,7 @@ public class Enemies : MonoBehaviour
                     StartCoroutine(player2Visual.ChangePlayerColor());
                 }
 
-              
+
 
                 if (damagePlayer > damagePlayerTimeInterval)
                 {
@@ -174,24 +178,55 @@ public class Enemies : MonoBehaviour
                 player2Visual.toggleColor = false;
                 coroutineOn = false;
             }
-            
+
         }
     }
 
 
-    public void KillEnemy()
+    public int DamageMe(int damage)
     {
+        enemyHealth -= damage;
+        animator.SetBool("GetHit", true);
+        //StartCoroutine(ChangeEnemyColor());
         if (enemyHealth <= 0)
         {
-            Destroy(enemy);
+            //enemy.SetActive(false);
+            //Had to add these bools and set them false here as they were never becoming false if player kills enemy while in enemy raycast
+            player_2_Health.decreaseHealth = false;
+            player2Visual.toggleColor = false;
+            coroutineOn = false;
+            if(playerAttack.enemyFacingPlayer == true)
+            {
+                animator.SetBool("dieFront", true);
+            }
+            else
+            {
+                animator.SetBool("dieBack", true);
+            }
+            //Destroy(enemy);
         }
+        return enemyHealth;
     }
 
     public IEnumerator ChangeEnemyColor()
     {
-        renderer.GetComponent<Renderer>().material.color = Color.red;
+        rendererBody1.GetComponent<Renderer>().material.color = Color.red;
+        rendererBody2.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(0.5f);
-        renderer.GetComponent<Renderer>().material.color = Color.white;
+        rendererBody1.GetComponent<Renderer>().material.color = Color.white;
+        rendererBody2.GetComponent<Renderer>().material.color = Color.white;
+
+        /*Debug to fix Null Reference after gameobject destroyed
+         * if (enemy.GetComponent<Enemies>().enemyHealth <= 0)
+        {
+            
+        }
+        else
+        {
+            rendererBody1.GetComponent<Renderer>().material.color = Color.white;
+            rendererBody2.GetComponent<Renderer>().material.color = Color.white;
+            print("enemyHealth" + enemy.GetComponent<Enemies>().enemyHealth);
+        }*/
     }
 
     /*private IEnumerator ChangePlayerColor()

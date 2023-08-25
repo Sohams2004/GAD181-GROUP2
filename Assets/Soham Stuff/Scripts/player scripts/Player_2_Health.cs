@@ -9,6 +9,7 @@ public class Player_2_Health : MonoBehaviour
     public float mathf;
 
     public bool decreaseHealth;
+    public bool increaseHealth;
 
     public UnityEngine.UI.Image image;
 
@@ -17,10 +18,16 @@ public class Player_2_Health : MonoBehaviour
     private void Start()
     {
         decreaseHealth = false;
+        increaseHealth = false;
+
     }
     public void HealthDecrease()
     {
         playerHealth -= damage * Mathf.Abs(mathf) * Time.deltaTime;
+    }
+    public void HealthIncrease()
+    {
+        playerHealth += playerHealth * Mathf.Abs(mathf) * Time.deltaTime;
     }
 
 
@@ -29,6 +36,14 @@ public class Player_2_Health : MonoBehaviour
         if (decreaseHealth == true)
         {
             HealthDecrease();
+        }
+
+        image.fillAmount = playerHealth;
+        image.color = gradient.Evaluate(image.fillAmount);
+
+        if(increaseHealth == true)
+        {
+            HealthIncrease();
         }
 
         image.fillAmount = playerHealth;
