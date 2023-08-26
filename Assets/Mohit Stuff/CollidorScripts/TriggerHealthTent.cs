@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerHealthTent : MonoBehaviour
 {
+    [SerializeField] private AudioSource healingSoundEffect;
     public bool inHealTent;
     public bool inHealTent2;
 
@@ -26,7 +27,8 @@ public class TriggerHealthTent : MonoBehaviour
         }
         else if (other.tag == "Player2")
         {
-
+        	//put this in player scripts
+            healingSoundEffect.Play();
             PlayerEnterTentEvent();
             Debug.Log("heal2?");
             //inHealTent2 = true;

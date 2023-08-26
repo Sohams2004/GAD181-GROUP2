@@ -26,6 +26,8 @@ public class PlayerAttack : MonoBehaviour
     //
    
 
+    [SerializeField] private AudioSource attackSoundEffect;
+
     //public bool enemyFacingEnemy;
 
     Enemies enemy;
@@ -98,11 +100,15 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {   //if crouching then crouch attack
+        
+            attackSoundEffect.Play();
+
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crouch & Crouch walk") || 
                 animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack")) 
             {
                 animator.SetTrigger("Attack");
                 Attack();
+                
                 
             }
             //if not then normal attack
