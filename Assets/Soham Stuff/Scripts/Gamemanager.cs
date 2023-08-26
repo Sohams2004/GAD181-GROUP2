@@ -13,6 +13,7 @@ public class Gamemanager : MonoBehaviour
 
     public GameObject player1, player2;
     public GameObject pauseScreen;
+    public GameObject controlPanel;
 
     public Player_1_movement player1Movement;
     public Player_2_movement player2Movement;
@@ -153,6 +154,16 @@ public class Gamemanager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OpenControlPanel()
+    {
+        controlPanel.SetActive(true);
+    }
+    
+    public void CloseControlPanel()
+    {
+        controlPanel.SetActive(false);
     }
     /*/
     public void GameOver()

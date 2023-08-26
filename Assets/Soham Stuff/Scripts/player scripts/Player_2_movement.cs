@@ -23,7 +23,7 @@ public class Player_2_movement : MonoBehaviour
     public float jumpForce = 5;
 
     public bool isGrounded2;
-    public float rayLength = 1f;
+    public float rayLength = 2f;
     public LayerMask floorMask;
 
     public Vector2 player2_Stand;
@@ -110,7 +110,7 @@ public class Player_2_movement : MonoBehaviour
         //raycast to replace isGrounded collidor, fixed jumping in quick succession issue
         // shoots 2d ray to the ground checking if ground assets have 
         RaycastHit2D hitinfo = (Physics2D.Raycast(transform.position, -transform.up, rayLength, floorMask));
-
+        
         if (hitinfo)
         {   //Makes sure player doesn't jump multiple times at once making him fly or once in a lifetime, basically checks if player is on ground
             //checking if ground assets have Floor tag and if true then sets isGrounded2 bool true which is received by jump function
