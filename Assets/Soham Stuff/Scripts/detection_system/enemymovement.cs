@@ -6,7 +6,9 @@ public class enemymovement : MonoBehaviour
 {
     [SerializeField] float patrolSpeed = 1f;
     [SerializeField] public Transform[] patrolPoints;  //assign the 2 patrol points here ie point A and point B.
+    [SerializeField] public Transform[] searchPoints;
     [SerializeField] public int patrolIndex;
+    [SerializeField] public int searchIndex;
     // public bool iAmRotating;
 
     Animator animator;
@@ -33,6 +35,14 @@ public class enemymovement : MonoBehaviour
         new Vector3(positionToGo.x, transform.position.y, transform.position.z), Time.deltaTime * patrolSpeed);
 
     }
+    /* public void Search(Vector3 positionToGo)
+     {
+         //transform.Translate(Time.deltaTime * patrolSpeed * transform.right);
+         //transform.position = Vector2.Lerp(transform.position, positionToGo, Time.deltaTime * patrolSpeed);
+         transform.position = Vector3.MoveTowards(new Vector3(transform.position.x, transform.position.y, transform.position.z),
+         new Vector3(positionToGo.x, transform.position.y, transform.position.z), Time.deltaTime * patrolSpeed);
+
+     }*/
     //function that moves the enemy to the point after the enemy have reached the first point
     public void patrolToNextPoint()
     {

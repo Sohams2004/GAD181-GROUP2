@@ -33,6 +33,7 @@ public class Player_2_Health : MonoBehaviour
 
     private void Update()
     {
+
         if (decreaseHealth == true)
         {
             HealthDecrease();
@@ -48,5 +49,21 @@ public class Player_2_Health : MonoBehaviour
 
         image.fillAmount = playerHealth;
         image.color = gradient.Evaluate(image.fillAmount);
+
+        /*if (decreaseHealth == true)
+        {
+            HealthDecrease();
+        }
+        else if(increaseHealth == true)
+        {
+            HealthIncrease();
+        }
+        else
+        {
+            image.fillAmount = playerHealth;
+            image.color = gradient.Evaluate(image.fillAmount);
+            decreaseHealth = false;
+            increaseHealth = false;
+        }*/
     }
 }

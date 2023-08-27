@@ -24,14 +24,15 @@ public class PlayerAttack : MonoBehaviour
     //public Player_2_movement playerFacingDirection;
     public bool enemyFacingPlayer;
     //
-   
 
-    [SerializeField] private AudioSource attackSoundEffect;
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip attackSoundEffect;
 
     //public bool enemyFacingEnemy;
 
     Enemies enemy;
-    public enemymovement enemyPatrolPoints;
+    //public enemymovement enemyPatrolPoints;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -42,7 +43,7 @@ public class PlayerAttack : MonoBehaviour
     {
         Collider2D[] attackEnemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRange, enemyLayer);
 
-        
+
         attack = true;
         foreach (Collider2D enemy in attackEnemy)
         {
@@ -60,7 +61,7 @@ public class PlayerAttack : MonoBehaviour
                     {
                         animator.SetBool("diefront", true);
                     }*/
-                 
+
                 }
                 if (angle > 0)
                 {
@@ -100,16 +101,16 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {   //if crouching then crouch attack
-        
-            attackSoundEffect.Play();
 
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crouch & Crouch walk") || 
-                animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack")) 
+
+
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crouch & Crouch walk") ||
+                animator.GetCurrentAnimatorStateInfo(0).IsName("CrouchAttack"))
             {
                 animator.SetTrigger("Attack");
                 Attack();
-                
-                
+                audioSource.PlayOneShot(attackSoundEffect);
+
             }
             //if not then normal attack
             else
@@ -121,17 +122,18 @@ public class PlayerAttack : MonoBehaviour
                     animator.SetTrigger("Attack");
                     attackCounter++;
                     animator.SetInteger("AttackCounter", attackCounter);
+                    audioSource.PlayOneShot(attackSoundEffect);
 
                     if (attackCounter >= 2)
                     {
                         attackCounter = 0;
                     }
-                }    
-                
+                }
+
                 attack = false;
             }
-           
+
         }
-        
+
     }
 }

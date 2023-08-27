@@ -8,7 +8,7 @@ public class Player_1_movement : MonoBehaviour
 
     [SerializeField] AudioClip hideSoundEffect;
     [SerializeField] AudioClip takingDamageSoundEffect;
-    
+
     public float movementSpeed = 10f;
     public float jumpForce = 5;
     public bool isGrounded1;
@@ -19,28 +19,62 @@ public class Player_1_movement : MonoBehaviour
     public Vector2 player1_Stand;
     public Vector2 player1_Crouch;
 
-    bool isCrouch;
+    //bool isCrouch;
 
     public BoxCollider2D P1_boxCollider2D;
     public Rigidbody2D player_1_rb;
 
-    [SerializeField] private Animator animator; 
+    [SerializeField] Renderer rendererBody1;
+    [SerializeField] Renderer rendererBody2;
+    public bool toggleColor;
+
+    [SerializeField] private Animator animator;
 
     public int playerHP = 4;
 
     GameObject gasWall;
     //Damage overtime variable for gaswall
-    float damageOverTime = 0f;
-    float damageOverTimeInterval = 1f;
-    
+    //float damageOverTime = 0f;
+    //float damageOverTimeInterval = 1f;
+
 
     GameObject healTent1;
-    GameObject hideSpot;
-    GameObject hideSpot1;
 
-    [SerializeField] private Animator animatorEnemyWalkBy;
+
+    //GameObject hideSpot;
+    //GameObject hideSpot1;
+    private TriggerCrouch hideSpot;
+    private TriggerCrouch hideSpot1;
+
+
+    //[SerializeField] private Animator animatorEnemyWalkBy;
     //[SerializeField] GameObject playerOne;
+    public ParticleSystem healingEffect;
 
+    private void Awake()
+    {
+        //subscribing to Delgate events placed in TriggerHealthTent
+        TriggerHealthTent.PlayerEnterTentEvent1 += OnPlayerEnterTent;
+        TriggerHealthTent.PlayerExitTentEvent1 += OnPlayerExitTent;
+    }
+    void OnDestroy()
+    {   //unSubbing to same events on destroy 
+        TriggerHealthTent.PlayerEnterTentEvent1 -= OnPlayerEnterTent;
+        TriggerHealthTent.PlayerExitTentEvent1 -= OnPlayerExitTent;
+    }
+
+    private void OnPlayerEnterTent()
+    {
+        healingEffect.Play();
+        HealBruh2(out playerHP);
+        Debug.Log("healed1");
+
+    }
+
+    private void OnPlayerExitTent()
+    {
+        healingEffect.Stop();
+    }
 
     void Start()
     {
@@ -53,10 +87,15 @@ public class Player_1_movement : MonoBehaviour
 
         healTent1 = GameObject.Find("HealingStation");
 
-        hideSpot = GameObject.Find("HideSpot");
-        hideSpot1 = GameObject.Find("HideSpot1");
+        //hideSpot = GameObject.Find("HideSpot");
+        //hideSpot1 = GameObject.Find("HideSpot1");
 
-       // playHideAudio= false;
+        hideSpot = FindAnyObjectByType<TriggerCrouch>();
+        hideSpot1 = FindAnyObjectByType<TriggerCrouch>();
+
+        healingEffect.Stop();
+
+        // playHideAudio= false;
     }
     private void FixedUpdate()
     {
@@ -93,17 +132,17 @@ public class Player_1_movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
 
-            isCrouch = true;
+            //isCrouch = true;
 
             //P1_boxCollider2D.offset = new Vector2(P1_boxCollider2D.offset.x, -0.09f);
             //P1_boxCollider2D.size = player1_Crouch;
             animator.SetBool("Crouch", true);
-           
+
         }
 
         if (Input.GetKeyUp(KeyCode.RightShift))
         {
-            isCrouch = false;
+            //isCrouch = false;
             //P1_boxCollider2D.offset = new Vector2(P1_boxCollider2D.offset.x, -0.01282739f);
             //P1_boxCollider2D.size = player1_Stand;
             animator.SetBool("Crouch", false);
@@ -112,7 +151,7 @@ public class Player_1_movement : MonoBehaviour
 
 
         // if gasWall's bool inGas true then damage player 1 damage per second and print for now, visual and sound later
-        if (gasWall.GetComponent<TriggerGasWall>().inGas == true)
+        /*if (gasWall.GetComponent<TriggerGasWall>().inGas == true)
         {
             Debug.Log("do i work ?");
             damageOverTime += Time.deltaTime;
@@ -133,10 +172,11 @@ public class Player_1_movement : MonoBehaviour
             if (isCrouch)
             {
                 gameObject.layer = 2;
-                animatorEnemyWalkBy.SetBool("GoOn", true);
+                //animatorEnemyWalkBy.SetBool("GoOn", true);
                 //hideSoundEffect.Play();
+                audioSource.PlayOneShot(hideSoundEffect);
             }
-           
+
         }
         else if (hideSpot1.GetComponent<TriggerCrouch>().inHide == true)
         {
@@ -144,6 +184,7 @@ public class Player_1_movement : MonoBehaviour
             if (isCrouch)
             {
                 gameObject.layer = 2;
+                audioSource.PlayOneShot(hideSoundEffect);
             }
         }
 
@@ -151,15 +192,16 @@ public class Player_1_movement : MonoBehaviour
         {
             //Debug.Log("i cri");
             gameObject.layer = 3;
-        }
+        }*/
 
 
 
-        if (healTent1.GetComponent<TriggerHealthTent>().inHealTent2 == true)
-        {
-            HealBruh2(out playerHP);
-            Debug.Log("healed2");
-        }
+
+        // if (healTent1.GetComponent<TriggerHealthTent>().inHealTent2 == true)
+        // {
+        //HealBruh2(out playerHP);
+        //Debug.Log("healed2");
+        // }
         Jump();
     }
 
@@ -180,8 +222,8 @@ public class Player_1_movement : MonoBehaviour
         //}
         //else
         //{
-       
-        player_1_rb.velocity = new Vector2(movementSpeed * inputx, player_1_rb.velocity.y);      
+
+        player_1_rb.velocity = new Vector2(movementSpeed * inputx, player_1_rb.velocity.y);
 
         if (inputx > 0)
         {
@@ -197,9 +239,10 @@ public class Player_1_movement : MonoBehaviour
 
         //}
         //Mathf Absolute makes it so be it minus or plus it will give back the number as positive, makes things easier for blendtree float
-        animator.SetFloat("xVelocity", /*Mathf.Abs(*/player_1_rb.velocity.x);
+        animator.SetFloat("xVelocity", /*Mathf.Abs(*/
+        player_1_rb.velocity.x);
 
-         animator.SetFloat("yVelocity", player_1_rb.velocity.y);
+        animator.SetFloat("yVelocity", player_1_rb.velocity.y);
         /*/
             *aaa
          * 
@@ -219,7 +262,27 @@ public class Player_1_movement : MonoBehaviour
 
         }
     }
+    public IEnumerator ChangePlayerColor()
+    {
+        if (!toggleColor)
+        {
+            rendererBody1.GetComponent<Renderer>().material.color = Color.white;
+            rendererBody2.GetComponent<Renderer>().material.color = Color.white;
+            yield break;
+        }
+        else
+        {
+            rendererBody1.GetComponent<Renderer>().material.color = Color.red;
+            rendererBody2.GetComponent<Renderer>().material.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            rendererBody1.GetComponent<Renderer>().material.color = Color.white;
+            rendererBody2.GetComponent<Renderer>().material.color = Color.white;
+            yield return new WaitForSeconds(0.5f);
+            StartCoroutine(ChangePlayerColor());
+        }
 
+    }
+    
     void HealBruh2(out int value)
     {
         value = 10;
@@ -227,7 +290,7 @@ public class Player_1_movement : MonoBehaviour
 
     public int DamageMe2()
     {
-       // takingDamageSoundEffect.Play();
+        audioSource.PlayOneShot(takingDamageSoundEffect);
         playerHP -= 1;
         print("hp" + playerHP);
         return playerHP;

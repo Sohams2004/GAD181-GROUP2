@@ -412,7 +412,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 77053652}
   - {fileID: 611514050}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &21698593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,18 +431,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 21698589}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!70 &21698594
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4349,7 +4362,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1692152262}
   - {fileID: 1552420609}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &734831291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4366,18 +4381,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 734831287}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!70 &734831292
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5372,7 +5398,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1916648545}
   - {fileID: 161172423}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &950711145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5389,18 +5417,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 950711141}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!70 &950711146
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -7474,7 +7513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309c43fcea752944b8f8d73f04e08c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  buttonPress: {fileID: 0}
   takingDamageSoundEffect: {fileID: 0}
+  cameraHolder: {fileID: 0}
   movementSpeed: 10
   jumpForce: 15
   isGrounded2: 0
@@ -7486,12 +7528,11 @@ MonoBehaviour:
   player2_Crouch: {x: 0, y: 0}
   P2_boxCollider2D: {fileID: 1212127617}
   player_2_rb: {fileID: 1212127621}
+  player_2_Health: {fileID: 0}
   playerHP2: 10
   animatorButtonOne: {fileID: 376620881}
   animatorGasWall: {fileID: 1529516490}
   healingEffect: {fileID: 364551595}
-  audioSource: {fileID: 0}
-  buttonPress: {fileID: 0}
 --- !u!114 &1212127625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7507,10 +7548,14 @@ MonoBehaviour:
   attackRange: 1
   damage: 5
   repulseForce: 0
+  attackPoint: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
   wallBro: 0
+  enemyFacingPlayer: 0
+  audioSource: {fileID: 0}
+  attackSoundEffect: {fileID: 0}
 --- !u!114 &1212127626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9073,7 +9118,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1374711427}
   - {fileID: 1158653765}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &1499157745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9090,18 +9137,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 1499157741}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!70 &1499157746
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9943,7 +10001,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 115987855}
   - {fileID: 1583026942}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &1622405759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9960,18 +10020,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 1622405756}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!70 &1622405760
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10641,18 +10712,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 1874076592}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 2
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!1 &1741874544
 GameObject:
   m_ObjectHideFlags: 0
@@ -12571,7 +12653,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1901804498}
   - {fileID: 1446584735}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &2000222736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12588,18 +12672,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 2000222733}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!70 &2000222737
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13619,7 +13714,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1879919701236443735}
   - {fileID: 8207020933901617884}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!4 &1390907131670887602
 Transform:
   m_ObjectHideFlags: 0
@@ -13650,18 +13747,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 930356380527955839}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!4 &1657213820606858904
 Transform:
   m_ObjectHideFlags: 0
@@ -13862,18 +13970,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 1874076592}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 1967427887}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!4 &1879919701236443735
 Transform:
   m_ObjectHideFlags: 0
@@ -13918,7 +14037,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 1657213820606858904}
   - {fileID: 9010709153776248339}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &2508712819985326782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13935,7 +14056,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 3030765864775290200}
   - {fileID: 4754836331436043731}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!114 &2727784859367556521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13952,18 +14075,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 4391267265582491760}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!4 &3030765864775290200
 Transform:
   m_ObjectHideFlags: 0
@@ -14777,6 +14911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283ac98402dd4f94e80f0299c2d70e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
   hideSoundEffect: {fileID: 0}
   takingDamageSoundEffect: {fileID: 0}
   movementSpeed: 10
@@ -14790,9 +14925,12 @@ MonoBehaviour:
   player1_Crouch: {x: 0, y: 0}
   P1_boxCollider2D: {fileID: 713803963}
   player_1_rb: {fileID: 713803962}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
+  toggleColor: 0
   animator: {fileID: 0}
   playerHP: 10
-  animatorEnemyWalkBy: {fileID: 1302748729}
+  healingEffect: {fileID: 0}
 --- !u!114 &4895556250645274785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14808,10 +14946,14 @@ MonoBehaviour:
   attackRange: 1
   damage: 5
   repulseForce: 0
+  attackPoint: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
   wallBro: 0
+  enemyFacingPlayer: 0
+  audioSource: {fileID: 0}
+  attackSoundEffect: {fileID: 0}
 --- !u!1001 &4975530195185118355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16286,18 +16428,29 @@ MonoBehaviour:
   PlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  searchPoint: {fileID: 0}
   enemy: {fileID: 7019033720691459468}
   player2: {fileID: 0}
   player1: {fileID: 0}
   enemyHealth: 5
   DamagePlayer: 0
   coroutineOn: 0
-  renderer: {fileID: 0}
+  rendererBody1: {fileID: 0}
+  rendererBody2: {fileID: 0}
   player: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   shooting: {fileID: 0}
   player_2_Health: {fileID: 0}
   player_1_Health: {fileID: 0}
+  suspiciousDistance: 0
+  chaseDistance: 0
+  shootDistance: 0
+  animator: {fileID: 0}
+  playerAttack: {fileID: 0}
+  enemyRb: {fileID: 0}
+  facingLeft: 0
+  tooClose: 0
+  semiClose: 0
+  notClose: 0
 --- !u!4 &8696593159620242847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4443613361938542151, guid: 7f660e7a09dcae547bc821bfa25e3188, type: 3}
@@ -16354,7 +16507,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 8617363884935372964}
   - {fileID: 2046012775318683695}
+  searchPoints: []
   patrolIndex: 0
+  searchIndex: 0
 --- !u!1001 &9203302158446896826
 PrefabInstance:
   m_ObjectHideFlags: 0

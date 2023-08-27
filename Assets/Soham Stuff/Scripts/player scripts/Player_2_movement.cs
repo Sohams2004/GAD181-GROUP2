@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+//using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player_2_movement : MonoBehaviour
 {
@@ -53,13 +53,13 @@ public class Player_2_movement : MonoBehaviour
     private void Awake()
     {
         //subscribing to Delgate events placed in TriggerHealthTent
-        TriggerHealthTent.PlayerEnterTentEvent += OnPlayerEnterTent;
-        TriggerHealthTent.PlayerExitTentEvent += OnPlayerExitTent;
+        TriggerHealthTent.PlayerEnterTentEvent2 += OnPlayerEnterTent;
+        TriggerHealthTent.PlayerExitTentEvent2 += OnPlayerExitTent;
     }
     void OnDestroy()
     {   //unSubbing to same events on destroy 
-        TriggerHealthTent.PlayerEnterTentEvent -= OnPlayerEnterTent;
-        TriggerHealthTent.PlayerExitTentEvent -= OnPlayerExitTent;
+        TriggerHealthTent.PlayerEnterTentEvent2 -= OnPlayerEnterTent;
+        TriggerHealthTent.PlayerExitTentEvent2 -= OnPlayerExitTent;
     }
 
 
@@ -275,15 +275,16 @@ public class Player_2_movement : MonoBehaviour
                 //if yes then play the sound effect and set the animator bools for gaswall and button true, opening the gate in the gaswall puzzle and stopping the gas
                 Debug.Log("boop");
                 audioSource.PlayOneShot(buttonPress);
-                animatorButtonOne.SetBool("OpenDoor", true);
+                animatorButtonOne.Play("OpenDoor");
+                
                 animatorGasWall.SetBool("StopGas", true);
             }
         }
-        /* if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
-         {
-             //HealBruh(out playerHP2);
-             //Debug.Log("healed2");
-         }*/
+        /*if (healTent2.GetComponent<TriggerHealthTent>().inHealTent2 == true)
+        {
+            //HealBruh(out playerHP2);
+            //Debug.Log("healed2");
+        }*/
         Jump();
 
     }

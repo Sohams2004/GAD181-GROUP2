@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class TriggerHealthTent : MonoBehaviour
 {
-    [SerializeField] private AudioSource healingSoundEffect;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip healingSoundEffect;
+    
     public bool inHealTent;
     public bool inHealTent2;
 
     public delegate void PlayerTentCollisiont();
-    public static event PlayerTentCollisiont PlayerEnterTentEvent;
-    public static event PlayerTentCollisiont PlayerExitTentEvent;
+    public static event PlayerTentCollisiont PlayerEnterTentEvent1;
+    public static event PlayerTentCollisiont PlayerEnterTentEvent2;
+    public static event PlayerTentCollisiont PlayerExitTentEvent1;
+    public static event PlayerTentCollisiont PlayerExitTentEvent2;
 
     private void Start()
     {
@@ -20,16 +24,17 @@ public class TriggerHealthTent : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            PlayerEnterTentEvent();
+            PlayerEnterTentEvent1();
             Debug.Log("heal?");
             inHealTent = true;
+            audioSource.PlayOneShot(healingSoundEffect);
 
         }
         else if (other.tag == "Player2")
         {
-        	//put this in player scripts
-            healingSoundEffect.Play();
-            PlayerEnterTentEvent();
+           
+            audioSource.PlayOneShot(healingSoundEffect);
+            PlayerEnterTentEvent2();
             Debug.Log("heal2?");
             //inHealTent2 = true;
         }
@@ -39,15 +44,14 @@ public class TriggerHealthTent : MonoBehaviour
         if (other.tag == "Player")
         {
 
-            PlayerExitTentEvent(); ;
-
+            PlayerExitTentEvent1();
             Debug.Log("stopheal?");
             inHealTent = false;
 
         }
         else if (other.tag == "Player2")
         {
-            PlayerExitTentEvent(); ;
+            PlayerExitTentEvent2();
             Debug.Log("stopheal2?");
             //inHealTent2 = false;
         }
